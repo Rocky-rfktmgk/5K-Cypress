@@ -2,2557 +2,1522 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
 
-<meta charset="UTF-8">
-
-<meta
+  <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
->
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<title>Bear Run – S.G.A. 5K Registration</title>
+  <title>Bear Run – S.G.A. 5K Registration</title>
 
-<meta name="theme-color" content="#EA816E">
-
-<meta
+  <meta
     name="description"
     content="Bear Run – S.G.A. 5K Registration"
->
+  >
 
-<meta
-    name="apple-mobile-web-app-capable"
-    content="yes"
->
+  <meta
+    name="theme-color"
+    content="#EA816E"
+  >
 
-<meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="default"
->
+  <style>
 
-<meta
-    name="apple-mobile-web-app-title"
-    content="SGA 5K"
->
+    :root{
+      --cream:#FAE4A0;
+      --cream-soft:#FFF9EA;
+      --cream-card:#FFFDF6;
 
-<link
-    rel="manifest"
-    href="./manifest.json"
->
+      --coral:#EA816E;
+      --coral-dark:#C96557;
+      --coral-soft:#FCE2DA;
 
-<link
-    rel="apple-touch-icon"
-    href="./icon-192.png"
->
+      --charcoal:#2A2A2E;
 
+      --teal:#2F7C83;
+      --teal-dark:#225A62;
+      --teal-soft:#E1F1EF;
 
-<style>
+      --navy:#304C66;
 
-:root{
+      --green:#398260;
+      --green-soft:#EAF6EF;
 
-    --cream:#FAE4A0;
-    --cream-soft:#FFF9EA;
-    --cream-card:#FFFDF6;
+      --red:#B94A48;
+      --red-soft:#FBE5E2;
 
-    --coral:#EA816E;
-    --coral-dark:#C96557;
-    --coral-soft:#FCE2DA;
+      --muted:#6E6A65;
+      --border:#E8DDBD;
 
-    --charcoal:#2A2A2E;
+      --white:#FFFFFF;
 
-    --teal:#2F7C83;
-    --teal-dark:#225A62;
-    --teal-soft:#E1F1EF;
-
-    --navy:#304C66;
-
-    --green:#398260;
-    --green-soft:#EAF6EF;
-
-    --red:#B94A48;
-    --red-soft:#FBE5E2;
-
-    --muted:#6E6A65;
-    --border:#E8DDBD;
-
-    --white:#FFFFFF;
-
-    --shadow:
+      --shadow:
         0 14px 40px
         rgba(42,42,46,.09);
+    }
 
-}
+    *{
+      box-sizing:border-box;
+    }
 
+    html{
+      scroll-behavior:smooth;
+    }
 
-*{
-    box-sizing:border-box;
-}
+    body{
+      margin:0;
+      min-height:100vh;
 
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-body{
-
-    margin:0;
-
-    min-height:100vh;
-
-    font-family:
+      font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    color:
-        var(--charcoal);
+      color:var(--charcoal);
 
-    background:
-
+      background:
         radial-gradient(
-            circle at 8% 0%,
-            rgba(234,129,110,.13),
-            transparent 28rem
+          circle at 8% 0%,
+          rgba(234,129,110,.13),
+          transparent 28rem
         ),
-
         radial-gradient(
-            circle at 95% 18%,
-            rgba(47,124,131,.11),
-            transparent 31rem
+          circle at 95% 18%,
+          rgba(47,124,131,.11),
+          transparent 31rem
         ),
-
         var(--cream-soft);
+    }
 
-}
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
 
+    button{
+      cursor:pointer;
+    }
 
-button,
-input,
-select,
-textarea{
+    .shell{
+      width:min(980px,92%);
+      margin:28px auto 60px;
+    }
 
-    font:inherit;
+    /* HERO */
 
-}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:26px;
+      align-items:center;
 
+      padding:34px;
+      margin-bottom:18px;
 
-button{
-    cursor:pointer;
-}
+      border-radius:24px;
 
+      color:white;
 
-.shell{
-
-    width:
-        min(
-            980px,
-            92%
-        );
-
-    margin:
-        28px auto 60px;
-
-}
-
-
-/* ==============================
-   OFFLINE / INSTALL
-============================== */
-
-.offline-banner{
-
-    display:none;
-
-    position:sticky;
-
-    top:0;
-
-    z-index:50;
-
-    width:100%;
-
-    padding:
-        10px 16px;
-
-    text-align:center;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    color:white;
-
-    background:
-        var(--red);
-
-}
-
-
-.offline-banner.show{
-    display:block;
-}
-
-
-.install-card{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:
-        space-between;
-
-    gap:16px;
-
-    margin-bottom:
-        18px;
-
-    padding:
-        14px 16px;
-
-    border:
-        1px solid
-        #D8C999;
-
-    border-radius:
-        16px;
-
-    background:
-        #FFF7D7;
-
-    box-shadow:
-        0 8px 22px
-        rgba(42,42,46,.06);
-
-}
-
-
-.install-card strong{
-
-    display:block;
-
-    margin-bottom:
-        3px;
-
-    font-size:
-        13px;
-
-}
-
-
-.install-card span{
-
-    display:block;
-
-    color:
-        var(--muted);
-
-    font-size:
-        11px;
-
-    line-height:
-        1.5;
-
-}
-
-
-.install-help{
-
-    display:none;
-
-    margin-top:
-        9px;
-
-}
-
-
-.install-help.show{
-    display:block;
-}
-
-
-/* ==============================
-   HERO
-============================== */
-
-.hero{
-
-    display:grid;
-
-    grid-template-columns:
-        1fr
-        auto;
-
-    gap:
-        26px;
-
-    align-items:center;
-
-    padding:
-        34px;
-
-    margin-bottom:
-        18px;
-
-    border-radius:
-        24px;
-
-    color:white;
-
-    background:
-
+      background:
         linear-gradient(
-            135deg,
-            #EA816E,
-            #D87261
+          135deg,
+          #EA816E,
+          #D87261
         );
 
-    box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
+    }
 
-}
+    .hero-badge{
+      display:inline-block;
 
+      margin-bottom:13px;
+      padding:7px 10px;
 
-.hero-badge{
+      border-radius:999px;
 
-    display:inline-block;
-
-    margin-bottom:
-        13px;
-
-    padding:
-        7px 10px;
-
-    border-radius:
-        999px;
-
-    background:
+      background:
         rgba(255,255,255,.17);
 
-    font-size:
-        10px;
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:.7px;
+    }
 
-    font-weight:
-        900;
+    .hero h1{
+      margin:0 0 12px;
 
-    letter-spacing:
-        .7px;
-
-}
-
-
-.hero h1{
-
-    margin:
-        0
-        0
-        12px;
-
-    font-family:
+      font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        clamp(
-            34px,
-            7vw,
-            56px
-        );
+      font-size:
+        clamp(34px,7vw,56px);
 
-    line-height:
-        1;
+      line-height:1;
+    }
 
-}
+    .hero h1 span{
+      color:#FFF0B8;
+    }
 
+    .hero p{
+      max-width:620px;
 
-.hero h1 span{
+      margin:0;
 
-    color:
-        #FFF0B8;
+      line-height:1.65;
+      font-size:13px;
+    }
 
-}
+    .hero-info{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
 
+      margin-top:18px;
+    }
 
-.hero p{
+    .info-chip{
+      padding:8px 11px;
 
-    max-width:
-        620px;
+      border-radius:10px;
 
-    margin:
-        0;
-
-    line-height:
-        1.65;
-
-    font-size:
-        13px;
-
-}
-
-
-.hero-info{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:
-        8px;
-
-    margin-top:
-        18px;
-
-}
-
-
-.info-chip{
-
-    padding:
-        8px 11px;
-
-    border-radius:
-        10px;
-
-    background:
+      background:
         rgba(255,255,255,.14);
 
-    font-size:
-        11px;
+      font-size:11px;
+      font-weight:800;
+    }
 
-    font-weight:
-        800;
+    .hero-logo{
+      width:145px;
+      height:145px;
 
-}
+      object-fit:cover;
 
+      border-radius:24px;
 
-.hero-logo{
-
-    width:
-        145px;
-
-    height:
-        145px;
-
-    object-fit:
-        cover;
-
-    border-radius:
-        24px;
-
-    border:
+      border:
         5px solid
         rgba(255,255,255,.65);
 
-    box-shadow:
+      box-shadow:
         0 12px 30px
         rgba(0,0,0,.13);
+    }
 
-}
+    /* CARDS */
 
+    .card{
+      margin-bottom:18px;
+      padding:24px;
 
-/* ==============================
-   CARDS
-============================== */
-
-.card{
-
-    margin-bottom:
-        18px;
-
-    padding:
-        24px;
-
-    border:
+      border:
         1px solid
         var(--border);
 
-    border-radius:
-        18px;
+      border-radius:18px;
 
-    background:
+      background:
         var(--cream-card);
 
-    box-shadow:
+      box-shadow:
         var(--shadow);
+    }
 
-}
+    .card-head{
+      display:flex;
 
+      align-items:flex-start;
+      justify-content:space-between;
 
-.card-head{
+      gap:18px;
 
-    display:flex;
+      margin-bottom:20px;
+    }
 
-    align-items:flex-start;
+    .card-head h2{
+      margin:0 0 5px;
 
-    justify-content:
-        space-between;
-
-    gap:
-        18px;
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.card-head h2{
-
-    margin:
-        0
-        0
-        5px;
-
-    font-family:
+      font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        22px;
+      font-size:22px;
+    }
 
-}
+    .card-head p{
+      margin:0;
 
+      color:var(--muted);
 
-.card-head p{
+      font-size:12px;
+      line-height:1.5;
+    }
 
-    margin:0;
+    .section-number{
+      width:36px;
+      height:36px;
 
-    color:
-        var(--muted);
+      display:grid;
+      place-items:center;
 
-    font-size:
-        12px;
+      flex:0 0 auto;
 
-    line-height:
-        1.5;
+      border-radius:11px;
 
-}
+      color:white;
+      background:var(--coral);
 
+      font-weight:900;
+      font-size:13px;
+    }
 
-.section-number{
+    /* FORM */
 
-    width:
-        36px;
+    .form-row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
 
-    height:
-        36px;
+    .field{
+      margin-bottom:14px;
+    }
 
-    display:grid;
+    .field label{
+      display:block;
 
-    place-items:center;
+      margin-bottom:7px;
 
-    flex:
-        0 0 auto;
+      font-size:12px;
+      font-weight:800;
+    }
 
-    border-radius:
-        11px;
+    .required{
+      color:var(--coral-dark);
+    }
 
-    color:white;
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
 
-    background:
-        var(--coral);
+      padding:12px 13px;
 
-    font-weight:
-        900;
-
-    font-size:
-        13px;
-
-}
-
-
-/* ==============================
-   FORM
-============================== */
-
-.form-row{
-
-    display:grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    gap:
-        14px;
-
-}
-
-
-.field{
-
-    margin-bottom:
-        14px;
-
-}
-
-
-.field label{
-
-    display:block;
-
-    margin-bottom:
-        7px;
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-}
-
-
-.required{
-
-    color:
-        var(--coral-dark);
-
-}
-
-
-.field input,
-.field select,
-.field textarea{
-
-    width:
-        100%;
-
-    padding:
-        12px 13px;
-
-    border:
+      border:
         1px solid
         #DDD3B5;
 
-    border-radius:
-        11px;
+      border-radius:11px;
 
-    outline:none;
+      outline:none;
 
-    color:
-        var(--charcoal);
+      color:var(--charcoal);
+      background:white;
+    }
 
-    background:white;
+    .field textarea{
+      min-height:88px;
+      resize:vertical;
+    }
 
-}
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      border-color:var(--coral);
 
-
-.field textarea{
-
-    min-height:
-        88px;
-
-    resize:vertical;
-
-}
-
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-
-    border-color:
-        var(--coral);
-
-    box-shadow:
+      box-shadow:
         0 0 0 3px
         rgba(234,129,110,.13);
+    }
 
-}
+    .helper{
+      margin:-4px 0 14px;
 
+      color:var(--muted);
 
-.helper{
+      font-size:10px;
+      line-height:1.5;
+    }
 
-    margin:
-        -4px
-        0
-        14px;
+    /* PARTICIPANTS */
 
-    color:
-        var(--muted);
+    .participant{
+      margin:15px 0;
+      padding:20px;
 
-    font-size:
-        10px;
-
-    line-height:
-        1.5;
-
-}
-
-
-/* ==============================
-   PARTICIPANTS
-============================== */
-
-.participant{
-
-    margin:
-        15px
-        0;
-
-    padding:
-        20px;
-
-    border:
+      border:
         1px solid
         #E2D7B9;
 
-    border-radius:
-        17px;
+      border-radius:17px;
 
-    background:
-        #FFFCF2;
+      background:#FFFCF2;
+    }
 
-}
+    .participant-top{
+      display:flex;
 
+      align-items:center;
+      justify-content:space-between;
 
-.participant-top{
+      gap:12px;
 
-    display:flex;
+      margin-bottom:16px;
+    }
 
-    align-items:center;
+    .participant-heading{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
 
-    justify-content:
-        space-between;
+    .participant-title{
+      margin:0;
 
-    gap:
-        12px;
-
-    margin-bottom:
-        16px;
-
-}
-
-
-.participant-heading{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:
-        10px;
-
-    flex-wrap:wrap;
-
-}
-
-
-.participant-title{
-
-    margin:0;
-
-    font-family:
+      font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        18px;
+      font-size:18px;
+    }
 
-}
+    .price-badge{
+      display:inline-block;
 
+      padding:6px 9px;
 
-.price-badge{
+      border-radius:999px;
 
-    display:inline-block;
+      color:var(--teal-dark);
+      background:var(--teal-soft);
 
-    padding:
-        6px 9px;
+      font-size:10px;
+      font-weight:900;
+    }
 
-    border-radius:
-        999px;
+    .student-fields,
+    .parent-info,
+    .second-emergency,
+    .medical-details{
+      display:none;
+    }
 
-    color:
-        var(--teal-dark);
+    .parent-info{
+      margin-top:12px;
+      padding:16px;
 
-    background:
-        var(--teal-soft);
-
-    font-size:
-        10px;
-
-    font-weight:
-        900;
-
-}
-
-
-.subsection{
-
-    margin:
-        19px
-        0
-        10px;
-
-    padding-top:
-        15px;
-
-    border-top:
-        1px solid
-        #E6DDBF;
-
-}
-
-
-.subsection h4{
-
-    margin:
-        0
-        0
-        12px;
-
-    color:
-        var(--teal-dark);
-
-    font-size:
-        12px;
-
-    letter-spacing:
-        .65px;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.student-fields,
-.parent-info,
-.second-emergency,
-.medical-details{
-
-    display:none;
-
-}
-
-
-.parent-info{
-
-    margin-top:
-        12px;
-
-    padding:
-        16px;
-
-    border:
+      border:
         1px solid
         #B8DCD6;
 
-    border-radius:
-        14px;
+      border-radius:14px;
 
-    background:
-        var(--teal-soft);
+      background:var(--teal-soft);
+    }
 
-}
+    .parent-info h4{
+      margin:0 0 12px;
 
+      color:var(--teal-dark);
 
-.parent-info h4{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.6px;
+    }
 
-    margin:
-        0
-        0
-        12px;
+    .medical-block{
+      margin-top:15px;
+      padding:16px;
 
-    color:
-        var(--teal-dark);
-
-    font-size:
-        12px;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .6px;
-
-}
-
-
-.medical-block{
-
-    margin-top:
-        15px;
-
-    padding:
-        16px;
-
-    border:
+      border:
         1px solid
         #E6DDBF;
 
-    border-radius:
-        14px;
+      border-radius:14px;
 
-    background:
-        #FFF9E9;
+      background:#FFF9E9;
+    }
 
-}
+    .medical-block h4{
+      margin:0 0 5px;
 
+      color:var(--navy);
 
-.medical-block h4{
+      font-size:14px;
+    }
 
-    margin:
-        0
-        0
-        5px;
+    .medical-block > p{
+      margin:0 0 15px;
 
-    color:
-        var(--navy);
+      color:var(--muted);
 
-    font-size:
-        14px;
+      font-size:11px;
+      line-height:1.5;
+    }
 
-}
+    .subsection{
+      margin:19px 0 10px;
+      padding-top:15px;
 
+      border-top:
+        1px solid
+        #E6DDBF;
+    }
 
-.medical-block > p{
+    .subsection h4{
+      margin:0 0 12px;
 
-    margin:
-        0
-        0
-        15px;
+      color:var(--teal-dark);
 
-    color:
-        var(--muted);
+      font-size:12px;
 
-    font-size:
-        11px;
+      letter-spacing:.65px;
+      text-transform:uppercase;
+    }
 
-    line-height:
-        1.5;
+    /* WAIVER */
 
-}
+    .waiver-intro{
+      padding:17px;
+      margin-bottom:16px;
 
-
-/* ==============================
-   WAIVER
-============================== */
-
-.waiver-intro{
-
-    padding:
-        17px;
-
-    margin-bottom:
-        16px;
-
-    border:
+      border:
         1px solid
         #B8DCD6;
 
-    border-radius:
-        14px;
+      border-radius:14px;
 
-    color:
-        #234B4F;
+      color:#234B4F;
+      background:var(--teal-soft);
 
-    background:
-        var(--teal-soft);
+      font-size:12px;
+      line-height:1.65;
+    }
 
-    font-size:
-        12px;
+    .waiver-intro h3{
+      margin:0 0 7px;
+      font-size:14px;
+    }
 
-    line-height:
-        1.65;
+    .waiver-intro p{
+      margin:0 0 14px;
+    }
 
-}
+    .waiver-intro p:last-child{
+      margin-bottom:0;
+    }
 
+    .consent-card{
+      margin:12px 0;
+      padding:17px;
 
-.waiver-intro h3{
-
-    margin:
-        0
-        0
-        7px;
-
-    font-size:
-        14px;
-
-}
-
-
-.waiver-intro p{
-
-    margin:
-        0
-        0
-        14px;
-
-}
-
-
-.waiver-intro p:last-child{
-    margin-bottom:0;
-}
-
-
-.consent-card{
-
-    margin:
-        12px
-        0;
-
-    padding:
-        17px;
-
-    border:
+      border:
         1px solid
         #D8C999;
 
-    border-radius:
-        14px;
+      border-radius:14px;
 
-    background:
-        #FFF9E4;
+      background:#FFF9E4;
+    }
 
-}
+    .consent-card strong{
+      display:block;
 
+      margin-bottom:8px;
 
-.consent-card strong{
+      color:var(--navy);
 
-    display:block;
+      font-size:13px;
+    }
 
-    margin-bottom:
-        8px;
+    .consent-card p{
+      margin:0;
 
-    color:
-        var(--navy);
+      font-size:12px;
+      line-height:1.65;
+    }
 
-    font-size:
-        13px;
+    .check-row{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
 
-}
+      margin-top:13px;
+    }
 
+    .check-row input{
+      width:auto;
+      margin-top:4px;
 
-.consent-card p{
+      flex:0 0 auto;
+    }
 
-    margin:0;
+    .check-row label{
+      font-size:12px;
+      font-weight:800;
+      line-height:1.55;
+    }
 
-    font-size:
-        12px;
+    /* BUTTONS */
 
-    line-height:
-        1.65;
+    .primary,
+    .secondary,
+    .danger{
+      border:0;
 
-}
+      border-radius:11px;
 
+      padding:11px 16px;
 
-.check-row{
+      font-size:12px;
+      font-weight:900;
+    }
 
-    display:flex;
+    .primary{
+      color:white;
+      background:var(--coral);
 
-    align-items:flex-start;
-
-    gap:
-        10px;
-
-    margin-top:
-        13px;
-
-}
-
-
-.check-row input{
-
-    width:auto;
-
-    margin-top:
-        4px;
-
-    flex:
-        0 0 auto;
-
-}
-
-
-.check-row label{
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-
-    line-height:
-        1.55;
-
-}
-
-
-/* ==============================
-   BUTTONS
-============================== */
-
-.primary,
-.secondary,
-.danger{
-
-    border:0;
-
-    border-radius:
-        11px;
-
-    padding:
-        11px 16px;
-
-    font-size:
-        12px;
-
-    font-weight:
-        900;
-
-}
-
-
-.primary{
-
-    color:white;
-
-    background:
-        var(--coral);
-
-    box-shadow:
+      box-shadow:
         0 8px 18px
         rgba(234,129,110,.22);
+    }
 
-}
+    .primary:hover{
+      background:var(--coral-dark);
+    }
 
+    .primary:disabled{
+      opacity:.6;
+      cursor:not-allowed;
+    }
 
-.primary:hover{
+    .secondary{
+      color:var(--charcoal);
+      background:#F1E9D2;
+    }
 
-    background:
-        var(--coral-dark);
+    .secondary:hover{
+      background:#E9DFC3;
+    }
 
-}
+    .danger{
+      color:#A6403E;
+      background:var(--red-soft);
+    }
 
+    .button-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
 
-.primary:disabled{
+    /* PRICING */
 
-    opacity:.6;
+    .price-breakdown{
+      display:grid;
 
-    cursor:not-allowed;
-
-}
-
-
-.secondary{
-
-    color:
-        var(--charcoal);
-
-    background:
-        #F1E9D2;
-
-}
-
-
-.secondary:hover{
-
-    background:
-        #E9DFC3;
-
-}
-
-
-.danger{
-
-    color:
-        #A6403E;
-
-    background:
-        var(--red-soft);
-
-}
-
-
-.button-row{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:
-        9px;
-
-}
-
-
-/* ==============================
-   TOTAL
-============================== */
-
-.price-breakdown{
-
-    display:grid;
-
-    grid-template-columns:
+      grid-template-columns:
         1fr
         1fr;
 
-    gap:
-        10px;
+      gap:10px;
 
-    margin-bottom:
-        12px;
+      margin-bottom:12px;
+    }
 
-}
+    .price-line{
+      padding:13px;
 
-
-.price-line{
-
-    padding:
-        13px;
-
-    border:
+      border:
         1px solid
         #E5D9B7;
 
-    border-radius:
-        12px;
+      border-radius:12px;
 
-    background:
-        #FFFDF5;
+      background:#FFFDF5;
+    }
 
-}
+    .price-line span{
+      display:block;
 
+      color:var(--muted);
 
-.price-line span{
+      font-size:10px;
+    }
 
-    display:block;
+    .price-line strong{
+      display:block;
 
-    color:
-        var(--muted);
+      margin-top:4px;
 
-    font-size:
-        10px;
+      font-size:15px;
+    }
 
-}
+    .total-box{
+      display:flex;
 
+      align-items:center;
+      justify-content:space-between;
 
-.price-line strong{
+      gap:16px;
 
-    display:block;
+      margin:12px 0 17px;
+      padding:18px;
 
-    margin-top:
-        4px;
-
-    font-size:
-        15px;
-
-}
-
-
-.total-box{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:
-        space-between;
-
-    gap:
-        16px;
-
-    margin:
-        12px
-        0
-        17px;
-
-    padding:
-        18px;
-
-    border:
+      border:
         1px solid
         #E1CFA0;
 
-    border-radius:
-        15px;
+      border-radius:15px;
 
-    background:
-
+      background:
         linear-gradient(
-            135deg,
-            #FFF1C3,
-            #F8DED6
+          135deg,
+          #FFF1C3,
+          #F8DED6
         );
+    }
 
-}
+    .total-box span{
+      display:block;
 
+      color:var(--muted);
 
-.total-box span{
+      font-size:11px;
+    }
 
-    display:block;
+    .total-box strong{
+      font-size:25px;
+    }
 
-    color:
-        var(--muted);
+    /* STATUS */
 
-    font-size:
-        11px;
+    .alert{
+      display:none;
 
-}
+      margin:14px 0;
+      padding:13px 14px;
 
+      border-radius:12px;
 
-.total-box strong{
+      font-size:12px;
+      line-height:1.5;
+    }
 
-    font-size:
-        25px;
+    .alert.error{
+      display:block;
 
-}
+      color:#8C3634;
+      background:var(--red-soft);
 
-
-/* ==============================
-   STATUS
-============================== */
-
-.alert{
-
-    display:none;
-
-    margin:
-        14px
-        0;
-
-    padding:
-        13px 14px;
-
-    border-radius:
-        12px;
-
-    font-size:
-        12px;
-
-    line-height:
-        1.5;
-
-}
-
-
-.alert.error{
-
-    display:block;
-
-    color:
-        #8C3634;
-
-    background:
-        var(--red-soft);
-
-    border:
+      border:
         1px solid
         #E6B7B2;
+    }
 
-}
+    .submit-status{
+      display:none;
 
+      margin-top:12px;
 
-.submit-status{
+      color:var(--muted);
 
-    display:none;
+      font-size:11px;
+    }
 
-    margin-top:
-        12px;
+    .submit-status.show{
+      display:block;
+    }
 
-    color:
-        var(--muted);
+    .spinner{
+      display:inline-block;
 
-    font-size:
-        11px;
+      width:11px;
+      height:11px;
 
-}
+      margin-right:7px;
 
-
-.submit-status.show{
-    display:block;
-}
-
-
-.spinner{
-
-    display:inline-block;
-
-    width:
-        11px;
-
-    height:
-        11px;
-
-    margin-right:
-        7px;
-
-    border:
+      border:
         2px solid
         #DCCFB0;
 
-    border-top-color:
+      border-top-color:
         var(--coral);
 
-    border-radius:
-        50%;
+      border-radius:50%;
 
-    animation:
+      animation:
         spin .7s linear infinite;
-
-}
-
-
-@keyframes spin{
-
-    to{
-        transform:
-            rotate(360deg);
     }
 
-}
+    @keyframes spin{
+      to{
+        transform:rotate(360deg);
+      }
+    }
 
+    /* CONFIRMATION */
 
-/* ==============================
-   CONFIRMATION
-============================== */
+    .confirmation{
+      display:none;
 
-.confirmation{
+      overflow:hidden;
 
-    display:none;
-
-    overflow:hidden;
-
-    border:
+      border:
         1px solid
         var(--border);
 
-    border-radius:
-        20px;
+      border-radius:20px;
 
-    background:white;
+      background:white;
 
-    box-shadow:
-        var(--shadow);
+      box-shadow:var(--shadow);
+    }
 
-}
+    .confirmation.show{
+      display:block;
+    }
 
+    .confirm-top{
+      padding:28px;
 
-.confirmation.show{
-    display:block;
-}
+      text-align:center;
 
+      color:#4A332C;
 
-.confirm-top{
-
-    padding:
-        28px;
-
-    text-align:center;
-
-    color:
-        #4A332C;
-
-    background:
-
+      background:
         linear-gradient(
-            135deg,
-            #FFE7A8,
-            #F4A18D
+          135deg,
+          #FFE7A8,
+          #F4A18D
         );
+    }
 
-}
+    .confirm-icon{
+      width:54px;
+      height:54px;
 
+      display:grid;
+      place-items:center;
 
-.confirm-icon{
+      margin:0 auto 12px;
 
-    width:
-        54px;
+      border-radius:50%;
 
-    height:
-        54px;
+      color:white;
+      background:var(--green);
 
-    display:grid;
+      font-size:24px;
+      font-weight:900;
+    }
 
-    place-items:center;
+    .confirm-top h2{
+      margin:0 0 6px;
 
-    margin:
-        0 auto
-        12px;
-
-    border-radius:
-        50%;
-
-    color:white;
-
-    background:
-        var(--green);
-
-    font-size:
-        24px;
-
-    font-weight:
-        900;
-
-}
-
-
-.confirm-top h2{
-
-    margin:
-        0
-        0
-        6px;
-
-    font-family:
+      font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-    font-size:
-        28px;
+      font-size:28px;
+    }
 
-}
+    .confirm-top p{
+      margin:0;
+    }
 
+    .confirm-body{
+      padding:24px;
+    }
 
-.confirm-top p{
-    margin:0;
-}
+    .summary-grid{
+      display:grid;
 
-
-.confirm-body{
-    padding:24px;
-}
-
-
-.summary-grid{
-
-    display:grid;
-
-    grid-template-columns:
+      grid-template-columns:
         repeat(3,1fr);
 
-    gap:
-        10px;
+      gap:10px;
+    }
 
-}
+    .summary-box{
+      padding:14px;
 
-
-.summary-box{
-
-    padding:
-        14px;
-
-    border:
+      border:
         1px solid
         var(--border);
 
-    border-radius:
-        13px;
+      border-radius:13px;
 
-    background:
-        #FFFDF7;
+      background:#FFFDF7;
+    }
 
-}
+    .summary-box span{
+      display:block;
 
+      margin-bottom:5px;
 
-.summary-box span{
+      color:var(--muted);
 
-    display:block;
+      font-size:10px;
+    }
 
-    margin-bottom:
-        5px;
+    .summary-box strong{
+      font-size:17px;
+    }
 
-    color:
-        var(--muted);
+    .names-list{
+      margin:17px 0;
+      padding-bottom:12px;
 
-    font-size:
-        10px;
-
-}
-
-
-.summary-box strong{
-    font-size:17px;
-}
-
-
-.names-list{
-
-    margin:
-        17px
-        0;
-
-    padding-bottom:
-        12px;
-
-    border-bottom:
+      border-bottom:
         1px solid
         var(--border);
+    }
 
-}
+    .names-list p{
+      margin:6px 0;
+      font-size:12px;
+    }
 
+    .payment-panel{
+      margin-top:18px;
+      padding:18px;
 
-.names-list p{
-
-    margin:
-        6px
-        0;
-
-    font-size:
-        12px;
-
-}
-
-
-.payment-panel{
-
-    margin-top:
-        18px;
-
-    padding:
-        18px;
-
-    border:
+      border:
         1px solid
         #CFE5DB;
 
-    border-radius:
-        14px;
+      border-radius:14px;
 
-    background:
-
+      background:
         linear-gradient(
-            135deg,
-            #EFF6FF,
-            #ECFDF5
+          135deg,
+          #EFF6FF,
+          #ECFDF5
         );
+    }
 
-}
+    .payment-panel h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
 
+    .payment-panel > p{
+      margin:0 0 13px;
 
-.payment-panel h3{
+      color:var(--muted);
 
-    margin:
-        0
-        0
-        6px;
+      font-size:11px;
+      line-height:1.55;
+    }
 
-    font-size:
-        16px;
+    .payment-group{
+      margin-top:12px;
+      padding:14px;
 
-}
+      border-radius:12px;
 
-
-.payment-panel > p{
-
-    margin:
-        0
-        0
-        13px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        11px;
-
-    line-height:
-        1.55;
-
-}
-
-
-.payment-group{
-
-    margin-top:
-        12px;
-
-    padding:
-        14px;
-
-    border-radius:
-        12px;
-
-    background:
+      background:
         rgba(255,255,255,.72);
+    }
 
-}
+    .payment-group strong{
+      display:block;
 
+      margin-bottom:5px;
 
-.payment-group strong{
+      font-size:13px;
+    }
 
-    display:block;
+    .payment-group p{
+      margin:0 0 10px;
 
-    margin-bottom:
-        5px;
+      color:var(--muted);
 
-    font-size:
-        13px;
+      font-size:11px;
+    }
 
-}
+    .payment-button{
+      display:inline-block;
 
+      padding:12px 16px;
 
-.payment-group p{
+      border-radius:10px;
 
-    margin:
-        0
-        0
-        10px;
+      text-decoration:none;
 
-    color:
-        var(--muted);
+      color:white;
+      background:var(--green);
 
-    font-size:
-        11px;
+      font-size:12px;
+      font-weight:900;
+    }
 
-}
+    .privacy-note{
+      margin-top:18px;
 
+      color:var(--muted);
 
-.payment-button{
+      font-size:10px;
+      line-height:1.55;
 
-    display:inline-block;
+      text-align:center;
+    }
 
-    padding:
-        12px 16px;
+    @media(max-width:760px){
 
-    border-radius:
-        10px;
+      .shell{
+        width:min(94%,980px);
+        margin-top:14px;
+      }
 
-    text-decoration:none;
+      .hero{
+        grid-template-columns:1fr;
 
-    color:white;
+        padding:25px 20px;
 
-    background:
-        var(--green);
+        border-radius:18px;
+      }
 
-    font-size:
-        12px;
+      .hero-logo{
+        width:115px;
+        height:115px;
 
-    font-weight:
-        900;
+        border-radius:18px;
+      }
 
-}
+      .card{
+        padding:19px;
+        border-radius:16px;
+      }
 
+      .form-row,
+      .price-breakdown,
+      .summary-grid{
+        grid-template-columns:1fr;
+      }
 
-.privacy-note{
+      .participant{
+        padding:16px;
+      }
 
-    margin-top:
-        18px;
+      .participant-top{
+        align-items:flex-start;
+      }
 
-    color:
-        var(--muted);
-
-    font-size:
-        10px;
-
-    line-height:
-        1.55;
-
-    text-align:center;
-
-}
-
-
-/* ==============================
-   MOBILE
-============================== */
-
-@media(max-width:760px){
-
-    .shell{
-
-        width:
-            min(
-                94%,
-                980px
-            );
-
-        margin-top:
-            14px;
+      .total-box{
+        align-items:flex-start;
+        flex-direction:column;
+      }
 
     }
 
+    @media print{
 
-    .install-card{
-
-        align-items:
-            flex-start;
-
-        flex-direction:
-            column;
-
-    }
-
-
-    .hero{
-
-        grid-template-columns:
-            1fr;
-
-        padding:
-            25px 20px;
-
-        border-radius:
-            18px;
-
-    }
-
-
-    .hero-logo{
-
-        width:
-            115px;
-
-        height:
-            115px;
-
-        border-radius:
-            18px;
-
-    }
-
-
-    .card{
-
-        padding:
-            19px;
-
-        border-radius:
-            16px;
-
-    }
-
-
-    .form-row,
-    .price-breakdown,
-    .summary-grid{
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .participant{
-
-        padding:
-            16px;
-
-    }
-
-
-    .participant-top{
-
-        align-items:
-            flex-start;
-
-    }
-
-
-    .total-box{
-
-        align-items:
-            flex-start;
-
-        flex-direction:
-            column;
-
-    }
-
-}
-
-
-/* ==============================
-   PRINT
-============================== */
-
-@media print{
-
-    .install-card,
-    .hero,
-    form,
-    .button-row,
-    .payment-panel{
-
+      .hero,
+      form,
+      .button-row,
+      .payment-panel{
         display:none !important;
+      }
 
-    }
-
-
-    body{
+      body{
         background:white;
-    }
+      }
 
-
-    .confirmation{
-
+      .confirmation{
         display:block !important;
 
         border:0;
-
         box-shadow:none;
+      }
 
     }
 
-}
-
-</style>
-
+  </style>
 </head>
 
 
 <body>
 
-
-<div
-    id="offlineBanner"
-    class="offline-banner"
->
-
-    You are offline. Connect to the internet before submitting a registration.
-
-</div>
-
-
 <main class="shell">
 
+  <!-- HERO -->
 
-<section
-    id="installCard"
-    class="install-card"
->
+  <section class="hero">
 
     <div>
 
-        <strong>
-            Install SGA 5K on your phone
-        </strong>
+      <div class="hero-badge">
+        🏃 STUDENT GOVERNMENT ASSOCIATION
+      </div>
 
-        <span>
-            Add Bear Run to your home screen for an app-like experience.
-        </span>
+      <h1>
+        <span>Bear Run</span>
+        <br>
+        S.G.A. 5K Registration
+      </h1>
 
-        <div
-            id="installHelp"
-            class="install-help"
-        >
+      <p>
+        Register yourself or multiple participants for the
+        Cypress Creek SGA 5K Fun Run/Walk.
 
-            <strong>
-                iPhone / iPad:
-            </strong>
+        Complete the participant, medical, emergency-contact,
+        and consent information below before submitting.
+      </p>
 
-            Open this site in Safari → Share → Add to Home Screen.
+      <div class="hero-info">
 
-            <br>
-
-            <strong>
-                Android:
-            </strong>
-
-            Open the browser menu → Install app or Add to Home screen.
-
+        <div class="info-chip">
+          Ages 15 & under: $10
         </div>
+
+        <div class="info-chip">
+          Ages 16+: $20
+        </div>
+
+        <div class="info-chip">
+          Multiple participants allowed
+        </div>
+
+      </div>
 
     </div>
-
-
-    <button
-        type="button"
-        class="secondary"
-        id="installBtn"
-    >
-
-        Install App
-
-    </button>
-
-</section>
-
-
-
-<section class="hero">
-
-
-    <div>
-
-        <div class="hero-badge">
-
-            🏃 STUDENT GOVERNMENT ASSOCIATION
-
-        </div>
-
-
-        <h1>
-
-            <span>
-                Bear Run
-            </span>
-
-            <br>
-
-            S.G.A. 5K Registration
-
-        </h1>
-
-
-        <p>
-
-            Register yourself or multiple participants for the
-            Cypress Creek SGA 5K Fun Run/Walk.
-
-            Complete the participant, medical, emergency-contact,
-            and consent information below before submitting.
-
-        </p>
-
-
-        <div class="hero-info">
-
-            <div class="info-chip">
-
-                Ages 15 & under: $10
-
-            </div>
-
-            <div class="info-chip">
-
-                Ages 16+: $20
-
-            </div>
-
-            <div class="info-chip">
-
-                Multiple participants allowed
-
-            </div>
-
-        </div>
-
-    </div>
-
 
     <img
-        src="./icon-512.png"
-        alt="Bear Run logo"
-        class="hero-logo"
+      src="./bear-run-icon.png"
+      alt="Bear Run logo"
+      class="hero-logo"
     >
 
-
-</section>
-
+  </section>
 
 
-<form
+  <form
     id="registrationForm"
     novalidate
->
+  >
 
+    <!-- PERSON COMPLETING FORM -->
 
-<!-- ==============================
-     1. REGISTRANT
-============================== -->
+    <section class="card">
 
-<section class="card">
-
-
-    <div class="card-head">
+      <div class="card-head">
 
         <div>
+          <h2>
+            Person Completing Registration
+          </h2>
 
-            <h2>
-                Person Completing Registration
-            </h2>
-
-            <p>
-                This person is the main contact for this registration.
-            </p>
-
+          <p>
+            This person is the main contact for this registration.
+          </p>
         </div>
 
         <div class="section-number">
-            1
+          1
         </div>
 
-    </div>
+      </div>
 
-
-    <div class="form-row">
-
+      <div class="form-row">
 
         <div class="field">
 
-            <label for="registrantName">
+          <label for="registrantName">
+            Full Name
+            <span class="required">*</span>
+          </label>
 
-                Full Name
-                <span class="required">*</span>
-
-            </label>
-
-            <input
-                id="registrantName"
-                type="text"
-                autocomplete="name"
-                required
-            >
+          <input
+            id="registrantName"
+            type="text"
+            autocomplete="name"
+            required
+          >
 
         </div>
-
 
         <div class="field">
 
-            <label for="registrantEmail">
+          <label for="registrantEmail">
+            Google Account Email
+            <span class="required">*</span>
+          </label>
 
-                Google Account Email
-                <span class="required">*</span>
-
-            </label>
-
-            <input
-                id="registrantEmail"
-                type="email"
-                autocomplete="email"
-                required
-            >
+          <input
+            id="registrantEmail"
+            type="email"
+            autocomplete="email"
+            required
+          >
 
         </div>
 
+      </div>
 
-    </div>
-
-
-    <div class="field">
+      <div class="field">
 
         <label for="registrantPhone">
-
-            Phone Number
-            <span class="required">*</span>
-
+          Phone Number
+          <span class="required">*</span>
         </label>
 
         <input
-            id="registrantPhone"
-            type="tel"
-            autocomplete="tel"
-            required
+          id="registrantPhone"
+          type="tel"
+          autocomplete="tel"
+          required
         >
 
-    </div>
+      </div>
+
+    </section>
 
 
-</section>
+    <!-- PARTICIPANTS -->
 
+    <section class="card">
 
-
-<!-- ==============================
-     2. PARTICIPANTS
-============================== -->
-
-<section class="card">
-
-
-    <div class="card-head">
+      <div class="card-head">
 
         <div>
 
-            <h2>
-                Participants
-            </h2>
+          <h2>
+            Participants
+          </h2>
 
-            <p>
-                Add every person who will participate in the 5K.
-                Pricing is calculated automatically from age.
-            </p>
+          <p>
+            Add every person who will participate in the 5K.
+            Pricing is calculated automatically from age.
+          </p>
 
         </div>
 
         <div class="section-number">
-            2
+          2
         </div>
 
-    </div>
+      </div>
 
-
-    <div class="button-row">
+      <div class="button-row">
 
         <button
-            type="button"
-            class="secondary"
-            id="addParticipantBtn"
+          type="button"
+          class="secondary"
+          id="addParticipantBtn"
         >
-
-            + Add Participant
-
+          + Add Participant
         </button>
 
-    </div>
+      </div>
+
+      <div id="participants"></div>
+
+    </section>
 
 
-    <div id="participants"></div>
+    <!-- WAIVER -->
 
+    <section class="card">
 
-</section>
-
-
-
-<!-- ==============================
-     3. WAIVER / CONSENT
-============================== -->
-
-<section class="card">
-
-
-    <div class="card-head">
+      <div class="card-head">
 
         <div>
 
-            <h2>
-                Waiver & Consent
-            </h2>
+          <h2>
+            Waiver & Consent
+          </h2>
 
-            <p>
-                Consent is completed directly in the registration app.
-            </p>
+          <p>
+            Consent is completed directly in this registration form.
+          </p>
 
         </div>
 
         <div class="section-number">
-            3
+          3
         </div>
 
-    </div>
+      </div>
 
-
-    <div class="waiver-intro">
+      <div class="waiver-intro">
 
         <h3>
-            Acknowledgment of Risks
+          Acknowledgment of Risks
         </h3>
 
         <p>
-
-            The Cypress Creek SGA 5K Fun Run/Walk involves physical
-            activity and risks that may include falls, uneven surfaces,
-            weather conditions, dehydration, injuries, and medical emergencies.
-
+          The Cypress Creek SGA 5K Fun Run/Walk involves physical
+          activity and risks that may include falls, uneven surfaces,
+          weather conditions, dehydration, injuries, and medical emergencies.
         </p>
 
-
         <h3>
-            Emergency Medical Authorization
+          Emergency Medical Authorization
         </h3>
 
         <p>
-
-            In an emergency, event personnel may contact emergency services
-            and request appropriate medical assistance. The participant or
-            parent/legal guardian may be responsible for medical expenses incurred.
-
+          In an emergency, event personnel may contact emergency
+          services and request appropriate medical assistance.
+          The participant or parent/legal guardian may be responsible
+          for medical expenses incurred.
         </p>
 
-
         <h3>
-            Event Rules
+          Event Rules
         </h3>
 
         <p>
-
-            Participants must follow event instructions, remain on the
-            designated course, respect others, and follow safety rules.
-            Event organizers may remove a participant for unsafe conduct.
-
+          Participants must follow event instructions, remain on the
+          designated course, respect others, and follow safety rules.
+          Event organizers may remove a participant for unsafe conduct.
         </p>
 
-    </div>
+      </div>
+
+      <div id="consentContainer"></div>
+
+    </section>
 
 
-    <div id="consentContainer"></div>
+    <!-- TOTAL -->
 
+    <section class="card">
 
-</section>
-
-
-
-<!-- ==============================
-     4. TOTAL
-============================== -->
-
-<section class="card">
-
-
-    <div class="card-head">
+      <div class="card-head">
 
         <div>
 
-            <h2>
-                Review Total
-            </h2>
+          <h2>
+            Review Total
+          </h2>
 
-            <p>
-                Age 15 and under is $10. Age 16 and older is $20.
-            </p>
+          <p>
+            Age 15 and under is $10. Age 16 and older is $20.
+          </p>
 
         </div>
 
         <div class="section-number">
-            4
+          4
         </div>
 
-    </div>
+      </div>
 
-
-    <div class="price-breakdown">
-
+      <div class="price-breakdown">
 
         <div class="price-line">
 
-            <span>
-                Ages 15 & Under
-            </span>
+          <span>
+            Ages 15 & Under
+          </span>
 
-            <strong id="youthBreakdown">
-                0 × $10 = $0.00
-            </strong>
+          <strong id="youthBreakdown">
+            0 × $10 = $0.00
+          </strong>
 
         </div>
-
 
         <div class="price-line">
 
-            <span>
-                Ages 16 & Older
-            </span>
+          <span>
+            Ages 16 & Older
+          </span>
 
-            <strong id="standardBreakdown">
-                0 × $20 = $0.00
-            </strong>
+          <strong id="standardBreakdown">
+            0 × $20 = $0.00
+          </strong>
 
         </div>
 
+      </div>
 
-    </div>
-
-
-    <div class="total-box">
-
+      <div class="total-box">
 
         <div>
 
-            <span>
-                Participants
-            </span>
+          <span>
+            Participants
+          </span>
 
-            <strong id="participantCount">
-                1
-            </strong>
+          <strong id="participantCount">
+            1
+          </strong>
 
         </div>
-
 
         <div>
 
-            <span>
-                Registration Total
-            </span>
+          <span>
+            Registration Total
+          </span>
 
-            <strong id="registrationTotal">
-                $0.00
-            </strong>
+          <strong id="registrationTotal">
+            $0.00
+          </strong>
 
         </div>
 
+      </div>
 
-    </div>
-
-
-    <div
+      <div
         id="errorBox"
         class="alert"
-    ></div>
+      ></div>
 
-
-    <button
+      <button
         type="submit"
         class="primary"
         id="submitBtn"
-    >
-
+      >
         Submit Registration
+      </button>
 
-    </button>
-
-
-    <div
+      <div
         id="submitStatus"
         class="submit-status"
-    >
+      >
 
         <span class="spinner"></span>
-
         Sending your registration…
 
-    </div>
+      </div>
+
+    </section>
+
+    <p class="privacy-note">
+      Registration information is collected for event administration,
+      emergency-contact, safety, and medical-information purposes.
+      Payment is handled separately through GoFan.
+    </p>
+
+  </form>
 
 
-</section>
+  <!-- CONFIRMATION -->
 
-
-<p class="privacy-note">
-
-    Registration information is collected for event administration,
-    emergency-contact, safety, and medical-information purposes.
-    Payment is handled separately through GoFan.
-
-</p>
-
-
-</form>
-
-
-
-<!-- ==============================
-     CONFIRMATION
-============================== -->
-
-<section
+  <section
     id="confirmation"
     class="confirmation"
->
-
+  >
 
     <div class="confirm-top">
 
+      <div class="confirm-icon">
+        ✓
+      </div>
 
-        <div class="confirm-icon">
-            ✓
-        </div>
+      <h2>
+        Registration Submitted
+      </h2>
 
-
-        <h2>
-            Registration Submitted
-        </h2>
-
-
-        <p>
-            Your Bear Run registration has been sent.
-        </p>
-
+      <p>
+        Your Bear Run registration has been sent.
+      </p>
 
     </div>
-
 
     <div class="confirm-body">
 
+      <div class="summary-grid">
 
-        <div class="summary-grid">
+        <div class="summary-box">
 
+          <span>
+            Registration ID
+          </span>
 
-            <div class="summary-box">
-
-                <span>
-                    Registration ID
-                </span>
-
-                <strong id="confirmId">
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="summary-box">
-
-                <span>
-                    Participants
-                </span>
-
-                <strong id="confirmCount">
-                    —
-                </strong>
-
-            </div>
-
-
-            <div class="summary-box">
-
-                <span>
-                    Total
-                </span>
-
-                <strong id="confirmTotal">
-                    —
-                </strong>
-
-            </div>
-
+          <strong id="confirmId">
+            —
+          </strong>
 
         </div>
 
+        <div class="summary-box">
 
-        <div
-            class="names-list"
-            id="confirmNames"
-        ></div>
+          <span>
+            Participants
+          </span>
 
-
-        <div class="payment-panel">
-
-
-            <h3>
-                GoFan Payment
-            </h3>
-
-
-            <p>
-
-                The payment options below are separated by age group.
-                If your registration includes both groups, complete both payments.
-
-            </p>
-
-
-            <div id="paymentGroups"></div>
-
+          <strong id="confirmCount">
+            —
+          </strong>
 
         </div>
 
+        <div class="summary-box">
 
-        <div
-            class="button-row"
-            style="margin-top:18px"
+          <span>
+            Total
+          </span>
+
+          <strong id="confirmTotal">
+            —
+          </strong>
+
+        </div>
+
+      </div>
+
+      <div
+        class="names-list"
+        id="confirmNames"
+      ></div>
+
+      <div class="payment-panel">
+
+        <h3>
+          GoFan Payment
+        </h3>
+
+        <p>
+          Payment options are separated by age group.
+          If your registration contains participants in both groups,
+          complete both payments.
+        </p>
+
+        <div id="paymentGroups"></div>
+
+      </div>
+
+      <div
+        class="button-row"
+        style="margin-top:18px"
+      >
+
+        <button
+          type="button"
+          class="secondary"
+          id="printBtn"
         >
+          Print / Save Confirmation
+        </button>
 
+        <button
+          type="button"
+          class="secondary"
+          id="anotherBtn"
+        >
+          Start Another Registration
+        </button>
 
-            <button
-                type="button"
-                class="secondary"
-                id="printBtn"
-            >
-
-                Print / Save Confirmation
-
-            </button>
-
-
-            <button
-                type="button"
-                class="secondary"
-                id="anotherBtn"
-            >
-
-                Start Another Registration
-
-            </button>
-
-
-        </div>
-
+      </div>
 
     </div>
 
-
-</section>
-
+  </section>
 
 </main>
-
 
 
 <script>
@@ -2564,35 +1529,31 @@ button{
 
 /* =========================================
    GOOGLE SHEETS
+
+   PASTE YOUR NEW GOOGLE APPS SCRIPT URL
+   BETWEEN THE QUOTES BELOW.
 ========================================= */
 
 const GOOGLE_SHEET_WEB_APP_URL =
+  "https://script.google.com/macros/s/AKfycbwUuXoe68yDBwPLA6OFHfGzMVVd210NjPZACID-f6-SA4SdIe8m0cjmbzMouab2hv3r/exec";
 
-    "https://script.google.com/macros/s/AKfycbwUuXoe68yDBwPLA6OFHfGzMVVd210NjPZACID-f6-SA4SdIe8m0cjmbzMouab2hv3r/exec";
 
 /* =========================================
    TEMPORARY GOFAN LINKS
 
-   Replace these later with the two real
-   GoFan links.
+   Replace these with the real GoFan links
+   when you receive them.
 ========================================= */
 
 const GOFAN_15_AND_UNDER_URL =
-
-    "https://example.com/gofan-15-and-under";
-
+  "https://example.com/gofan-15-and-under";
 
 const GOFAN_16_AND_OVER_URL =
-
-    "https://example.com/gofan-16-and-over";
-
-
-const YOUTH_PRICE =
-    10;
+  "https://example.com/gofan-16-and-over";
 
 
-const STANDARD_PRICE =
-    20;
+const YOUTH_PRICE = 10;
+const STANDARD_PRICE = 20;
 
 
 /* =========================================
@@ -2600,79 +1561,62 @@ const STANDARD_PRICE =
 ========================================= */
 
 const form =
-    document.getElementById(
-        "registrationForm"
-    );
-
+  document.getElementById(
+    "registrationForm"
+  );
 
 const participantsContainer =
-    document.getElementById(
-        "participants"
-    );
-
+  document.getElementById(
+    "participants"
+  );
 
 const consentContainer =
-    document.getElementById(
-        "consentContainer"
-    );
-
+  document.getElementById(
+    "consentContainer"
+  );
 
 const participantCount =
-    document.getElementById(
-        "participantCount"
-    );
-
+  document.getElementById(
+    "participantCount"
+  );
 
 const registrationTotal =
-    document.getElementById(
-        "registrationTotal"
-    );
-
+  document.getElementById(
+    "registrationTotal"
+  );
 
 const youthBreakdown =
-    document.getElementById(
-        "youthBreakdown"
-    );
-
+  document.getElementById(
+    "youthBreakdown"
+  );
 
 const standardBreakdown =
-    document.getElementById(
-        "standardBreakdown"
-    );
-
+  document.getElementById(
+    "standardBreakdown"
+  );
 
 const errorBox =
-    document.getElementById(
-        "errorBox"
-    );
-
+  document.getElementById(
+    "errorBox"
+  );
 
 const submitButton =
-    document.getElementById(
-        "submitBtn"
-    );
-
+  document.getElementById(
+    "submitBtn"
+  );
 
 const submitStatus =
-    document.getElementById(
-        "submitStatus"
-    );
-
+  document.getElementById(
+    "submitStatus"
+  );
 
 const confirmation =
-    document.getElementById(
-        "confirmation"
-    );
+  document.getElementById(
+    "confirmation"
+  );
 
 
-const offlineBanner =
-    document.getElementById(
-        "offlineBanner"
-    );
-
-
-let participantSerial =
-    0;
+let participantSerial = 0;
 
 
 /* =========================================
@@ -2681,777 +1625,696 @@ let participantSerial =
 
 function escapeHtml(value){
 
-    const div =
-        document.createElement(
-            "div"
-        );
+  const div =
+    document.createElement(
+      "div"
+    );
 
-    div.textContent =
-        value ?? "";
+  div.textContent =
+    value ?? "";
 
-    return div.innerHTML;
+  return div.innerHTML;
 
 }
 
 
 function formatMoney(value){
 
-    return Number(
-        value || 0
-    ).toLocaleString(
+  return Number(
+    value || 0
+  ).toLocaleString(
 
-        "en-US",
+    "en-US",
 
-        {
+    {
+      style:"currency",
+      currency:"USD"
+    }
 
-            style:
-                "currency",
-
-            currency:
-                "USD"
-
-        }
-
-    );
+  );
 
 }
 
 
 function createRegistrationId(){
 
-    const now =
-        new Date();
+  const now =
+    new Date();
 
-
-    const datePart =
-
-        now
-            .getFullYear()
-            .toString()
-            .slice(-2)
-
-        +
-
-        String(
-            now.getMonth() + 1
-        )
-        .padStart(
-            2,
-            "0"
-        )
-
-        +
-
-        String(
-            now.getDate()
-        )
-        .padStart(
-            2,
-            "0"
-        );
-
-
-    const randomPart =
-
-        Math
-            .random()
-            .toString(36)
-            .slice(2,7)
-            .toUpperCase();
-
-
-    return (
-        "5K-"
-        +
-        datePart
-        +
-        "-"
-        +
-        randomPart
+  const datePart =
+    now.getFullYear()
+      .toString()
+      .slice(-2)
+    +
+    String(
+      now.getMonth() + 1
+    ).padStart(
+      2,
+      "0"
+    )
+    +
+    String(
+      now.getDate()
+    ).padStart(
+      2,
+      "0"
     );
+
+  const randomPart =
+    Math.random()
+      .toString(36)
+      .slice(2,7)
+      .toUpperCase();
+
+  return (
+    "5K-"
+    +
+    datePart
+    +
+    "-"
+    +
+    randomPart
+  );
 
 }
 
 
 function getAge(card){
 
-    const value =
-        card
-            .querySelector(
-                ".participant-age"
-            )
-            .value;
+  const value =
+    card
+      .querySelector(
+        ".participant-age"
+      )
+      .value;
 
+  if(
+    value === ""
+  ){
+    return null;
+  }
 
-    if(
-        value === ""
-    ){
+  const age =
+    Number(value);
 
-        return null;
+  if(
+    !Number.isFinite(age)
+  ){
+    return null;
+  }
 
-    }
-
-
-    const age =
-        Number(value);
-
-
-    if(
-        !Number.isFinite(age)
-    ){
-
-        return null;
-
-    }
-
-
-    return age;
+  return age;
 
 }
 
 
 function priceForAge(age){
 
-    if(
-        age === null
-        ||
-        age < 0
-        ||
-        age > 120
-    ){
+  if(
+    age === null
+    ||
+    age < 0
+    ||
+    age > 120
+  ){
+    return 0;
+  }
 
-        return 0;
-
-    }
-
-
-    return (
-        age <= 15
-        ?
-        YOUTH_PRICE
-        :
-        STANDARD_PRICE
-    );
+  return (
+    age <= 15
+      ? YOUTH_PRICE
+      : STANDARD_PRICE
+  );
 
 }
 
 
 /* =========================================
-   PARTICIPANT
+   PARTICIPANTS
 ========================================= */
 
 function createParticipant(){
 
-    participantSerial++;
+  participantSerial++;
+
+  const card =
+    document.createElement(
+      "div"
+    );
+
+  card.className =
+    "participant";
+
+  card.dataset.participantId =
+    "participant-"
+    +
+    participantSerial;
+
+  card.innerHTML = `
+
+    <div class="participant-top">
+
+      <div class="participant-heading">
+
+        <h3 class="participant-title">
+          Participant
+        </h3>
+
+        <span class="price-badge">
+          Enter age for price
+        </span>
+
+      </div>
+
+      <button
+        type="button"
+        class="danger remove-participant"
+      >
+        Remove
+      </button>
+
+    </div>
 
 
-    const card =
-        document.createElement(
-            "div"
-        );
+    <div class="form-row">
+
+      <div class="field">
+
+        <label>
+          First Name
+          <span class="required">*</span>
+        </label>
+
+        <input
+          class="first-name"
+          type="text"
+          autocomplete="given-name"
+          required
+        >
+
+      </div>
+
+      <div class="field">
+
+        <label>
+          Last Name
+          <span class="required">*</span>
+        </label>
+
+        <input
+          class="last-name"
+          type="text"
+          autocomplete="family-name"
+          required
+        >
+
+      </div>
+
+    </div>
 
 
-    card.className =
-        "participant";
+    <div class="form-row">
+
+      <div class="field">
+
+        <label>
+          Participant Email
+          <span class="required">*</span>
+        </label>
+
+        <input
+          class="participant-email"
+          type="email"
+          required
+        >
+
+      </div>
+
+      <div class="field">
+
+        <label>
+          Participant Phone
+          <span class="required">*</span>
+        </label>
+
+        <input
+          class="participant-phone"
+          type="tel"
+          required
+        >
+
+      </div>
+
+    </div>
 
 
-    card.dataset.participantId =
-        "participant-"
-        +
-        participantSerial;
+    <div class="field">
+
+      <label>
+        Age
+        <span class="required">*</span>
+      </label>
+
+      <input
+        class="participant-age"
+        type="number"
+        min="0"
+        max="120"
+        inputmode="numeric"
+        required
+      >
+
+    </div>
 
 
-    card.innerHTML = `
+    <div class="field">
 
-        <div class="participant-top">
+      <label>
+        Are you currently a Cypress Creek High School student?
+        <span class="required">*</span>
+      </label>
 
-            <div class="participant-heading">
+      <select
+        class="student-status"
+        required
+      >
 
-                <h3 class="participant-title">
-                    Participant
-                </h3>
+        <option value="">
+          Select an option
+        </option>
 
-                <span class="price-badge">
-                    Enter age for price
-                </span>
+        <option value="yes">
+          Yes
+        </option>
 
-            </div>
+        <option value="no">
+          No
+        </option>
 
+      </select>
 
-            <button
-                type="button"
-                class="danger remove-participant"
-            >
-                Remove
-            </button>
-
-        </div>
-
-
-        <div class="form-row">
-
-
-            <div class="field">
-
-                <label>
-                    First Name
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    class="first-name"
-                    type="text"
-                    autocomplete="given-name"
-                    required
-                >
-
-            </div>
+    </div>
 
 
-            <div class="field">
+    <div class="student-fields">
 
-                <label>
-                    Last Name
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    class="last-name"
-                    type="text"
-                    autocomplete="family-name"
-                    required
-                >
-
-            </div>
-
-
-        </div>
-
-
-        <div class="form-row">
-
-
-            <div class="field">
-
-                <label>
-                    Participant Email
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    class="participant-email"
-                    type="email"
-                    required
-                >
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Participant Phone
-                    <span class="required">*</span>
-                </label>
-
-                <input
-                    class="participant-phone"
-                    type="tel"
-                    required
-                >
-
-            </div>
-
-
-        </div>
-
+      <div class="form-row">
 
         <div class="field">
 
+          <label>
+            Grade
+            <span class="required">*</span>
+          </label>
+
+          <select class="grade">
+
+            <option value="">
+              Select grade
+            </option>
+
+            <option value="9">
+              9th Grade
+            </option>
+
+            <option value="10">
+              10th Grade
+            </option>
+
+            <option value="11">
+              11th Grade
+            </option>
+
+            <option value="12">
+              12th Grade
+            </option>
+
+          </select>
+
+        </div>
+
+        <div class="field">
+
+          <label>
+            Student ID
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="student-id"
+            type="text"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="parent-info">
+
+      <h4>
+        Parent / Legal Guardian
+      </h4>
+
+      <div class="form-row">
+
+        <div class="field">
+
+          <label>
+            Parent / Guardian Name
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="parent-name"
+            type="text"
+          >
+
+        </div>
+
+        <div class="field">
+
+          <label>
+            Relationship to Participant
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="parent-relationship"
+            type="text"
+            placeholder="Example: Parent"
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="form-row">
+
+        <div class="field">
+
+          <label>
+            Parent / Guardian Email
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="parent-email"
+            type="email"
+          >
+
+        </div>
+
+        <div class="field">
+
+          <label>
+            Parent / Guardian Phone
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="parent-phone"
+            type="tel"
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="medical-block">
+
+      <h4>
+        Medical & Allergy Information
+      </h4>
+
+      <p>
+        This information helps event personnel respond appropriately
+        if assistance is needed.
+      </p>
+
+      <div class="field">
+
+        <label>
+          Does this participant have any allergies?
+          <span class="required">*</span>
+        </label>
+
+        <select
+          class="allergies-status"
+          required
+        >
+
+          <option value="">
+            Select an option
+          </option>
+
+          <option value="no">
+            No
+          </option>
+
+          <option value="yes">
+            Yes
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="medical-details allergy-details">
+
+        <div class="field">
+
+          <label>
+            Describe the allergies
+            <span class="required">*</span>
+          </label>
+
+          <textarea
+            class="allergy-text"
+            placeholder="Include food, medication, environmental, or other known allergies."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Does this participant have any medical conditions?
+          <span class="required">*</span>
+        </label>
+
+        <select
+          class="conditions-status"
+          required
+        >
+
+          <option value="">
+            Select an option
+          </option>
+
+          <option value="no">
+            No
+          </option>
+
+          <option value="yes">
+            Yes
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="medical-details condition-details">
+
+        <div class="field">
+
+          <label>
+            Describe the medical condition(s)
+            <span class="required">*</span>
+          </label>
+
+          <textarea
+            class="condition-text"
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Does this participant take any medications that event personnel should know about?
+          <span class="required">*</span>
+        </label>
+
+        <select
+          class="medications-status"
+          required
+        >
+
+          <option value="">
+            Select an option
+          </option>
+
+          <option value="no">
+            No
+          </option>
+
+          <option value="yes">
+            Yes
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="medical-details medication-details">
+
+        <div class="field">
+
+          <label>
+            List the medication(s)
+            <span class="required">*</span>
+          </label>
+
+          <textarea
+            class="medication-text"
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Other medical or safety information
+        </label>
+
+        <textarea
+          class="other-medical"
+          placeholder="Optional"
+        ></textarea>
+
+      </div>
+
+    </div>
+
+
+    <div class="subsection">
+
+      <h4>
+        Emergency Contact 1
+      </h4>
+
+      <div class="form-row">
+
+        <div class="field">
+
+          <label>
+            Name
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="emergency-one-name"
+            type="text"
+            required
+          >
+
+        </div>
+
+        <div class="field">
+
+          <label>
+            Phone Number
+            <span class="required">*</span>
+          </label>
+
+          <input
+            class="emergency-one-phone"
+            type="tel"
+            required
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="second-emergency">
+
+      <div class="subsection">
+
+        <h4>
+          Emergency Contact 2 — Required for Ages 15 & Under
+        </h4>
+
+        <div class="form-row">
+
+          <div class="field">
+
             <label>
-                Age
-                <span class="required">*</span>
+              Name
+              <span class="required">*</span>
             </label>
 
             <input
-                class="participant-age"
-                type="number"
-                min="0"
-                max="120"
-                inputmode="numeric"
-                required
+              class="emergency-two-name"
+              type="text"
             >
 
-        </div>
+          </div>
 
-
-        <div class="field">
+          <div class="field">
 
             <label>
-
-                Are you currently a Cypress Creek High School student?
-
-                <span class="required">*</span>
-
+              Phone Number
+              <span class="required">*</span>
             </label>
 
-            <select
-                class="student-status"
-                required
+            <input
+              class="emergency-two-phone"
+              type="tel"
             >
 
-                <option value="">
-                    Select an option
-                </option>
-
-                <option value="yes">
-                    Yes
-                </option>
-
-                <option value="no">
-                    No
-                </option>
-
-            </select>
+          </div>
 
         </div>
 
+      </div>
 
-        <div class="student-fields">
+    </div>
 
+  `;
 
-            <div class="form-row">
+  participantsContainer
+    .appendChild(card);
 
+  setupParticipant(card);
 
-                <div class="field">
+  renumberParticipants();
 
-                    <label>
-                        Grade
-                        <span class="required">*</span>
-                    </label>
+  updatePricing();
 
-                    <select class="grade">
-
-                        <option value="">
-                            Select grade
-                        </option>
-
-                        <option value="9">
-                            9th Grade
-                        </option>
-
-                        <option value="10">
-                            10th Grade
-                        </option>
-
-                        <option value="11">
-                            11th Grade
-                        </option>
-
-                        <option value="12">
-                            12th Grade
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Student ID
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="student-id"
-                        type="text"
-                    >
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <div class="parent-info">
-
-
-            <h4>
-                Parent / Legal Guardian
-            </h4>
-
-
-            <div class="form-row">
-
-
-                <div class="field">
-
-                    <label>
-                        Parent / Guardian Name
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="parent-name"
-                        type="text"
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Relationship to Participant
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="parent-relationship"
-                        type="text"
-                        placeholder="Example: Parent"
-                    >
-
-                </div>
-
-
-            </div>
-
-
-            <div class="form-row">
-
-
-                <div class="field">
-
-                    <label>
-                        Parent / Guardian Email
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="parent-email"
-                        type="email"
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Parent / Guardian Phone
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="parent-phone"
-                        type="tel"
-                    >
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <div class="medical-block">
-
-
-            <h4>
-                Medical & Allergy Information
-            </h4>
-
-
-            <p>
-
-                This information helps event personnel respond appropriately
-                if assistance is needed.
-
-            </p>
-
-
-            <div class="field">
-
-                <label>
-                    Does this participant have any allergies?
-                    <span class="required">*</span>
-                </label>
-
-                <select
-                    class="allergies-status"
-                    required
-                >
-
-                    <option value="">
-                        Select an option
-                    </option>
-
-                    <option value="no">
-                        No
-                    </option>
-
-                    <option value="yes">
-                        Yes
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="medical-details allergy-details">
-
-                <div class="field">
-
-                    <label>
-                        Describe the allergies
-                        <span class="required">*</span>
-                    </label>
-
-                    <textarea
-                        class="allergy-text"
-                        placeholder="Include food, medication, environmental, or other known allergies."
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Does this participant have any medical conditions?
-                    <span class="required">*</span>
-                </label>
-
-                <select
-                    class="conditions-status"
-                    required
-                >
-
-                    <option value="">
-                        Select an option
-                    </option>
-
-                    <option value="no">
-                        No
-                    </option>
-
-                    <option value="yes">
-                        Yes
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="medical-details condition-details">
-
-                <div class="field">
-
-                    <label>
-                        Describe the medical condition(s)
-                        <span class="required">*</span>
-                    </label>
-
-                    <textarea
-                        class="condition-text"
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Does this participant take any medications that event personnel should know about?
-                    <span class="required">*</span>
-                </label>
-
-                <select
-                    class="medications-status"
-                    required
-                >
-
-                    <option value="">
-                        Select an option
-                    </option>
-
-                    <option value="no">
-                        No
-                    </option>
-
-                    <option value="yes">
-                        Yes
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="medical-details medication-details">
-
-                <div class="field">
-
-                    <label>
-                        List the medication(s)
-                        <span class="required">*</span>
-                    </label>
-
-                    <textarea
-                        class="medication-text"
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <div class="field">
-
-                <label>
-                    Other medical or safety information
-                </label>
-
-                <textarea
-                    class="other-medical"
-                    placeholder="Optional"
-                ></textarea>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="subsection">
-
-
-            <h4>
-                Emergency Contact 1
-            </h4>
-
-
-            <div class="form-row">
-
-
-                <div class="field">
-
-                    <label>
-                        Name
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="emergency-one-name"
-                        type="text"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>
-                        Phone Number
-                        <span class="required">*</span>
-                    </label>
-
-                    <input
-                        class="emergency-one-phone"
-                        type="tel"
-                        required
-                    >
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-        <div class="second-emergency">
-
-
-            <div class="subsection">
-
-
-                <h4>
-                    Emergency Contact 2 — Required for Ages 15 & Under
-                </h4>
-
-
-                <div class="form-row">
-
-
-                    <div class="field">
-
-                        <label>
-                            Name
-                            <span class="required">*</span>
-                        </label>
-
-                        <input
-                            class="emergency-two-name"
-                            type="text"
-                        >
-
-                    </div>
-
-
-                    <div class="field">
-
-                        <label>
-                            Phone Number
-                            <span class="required">*</span>
-                        </label>
-
-                        <input
-                            class="emergency-two-phone"
-                            type="tel"
-                        >
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    `;
-
-
-    participantsContainer
-        .appendChild(card);
-
-
-    setupParticipant(card);
-
-    renumberParticipants();
-
-    updatePricing();
-
-    renderConsents();
+  renderConsents();
 
 }
 
@@ -3462,488 +2325,372 @@ function createParticipant(){
 
 function setupParticipant(card){
 
-    const ageInput =
-        card.querySelector(
-            ".participant-age"
-        );
+  const ageInput =
+    card.querySelector(
+      ".participant-age"
+    );
+
+  const firstName =
+    card.querySelector(
+      ".first-name"
+    );
+
+  const lastName =
+    card.querySelector(
+      ".last-name"
+    );
+
+  const priceBadge =
+    card.querySelector(
+      ".price-badge"
+    );
+
+  const studentStatus =
+    card.querySelector(
+      ".student-status"
+    );
+
+  const studentFields =
+    card.querySelector(
+      ".student-fields"
+    );
+
+  const grade =
+    card.querySelector(
+      ".grade"
+    );
+
+  const studentId =
+    card.querySelector(
+      ".student-id"
+    );
+
+  const parentInfo =
+    card.querySelector(
+      ".parent-info"
+    );
+
+  const parentFields = [
+
+    card.querySelector(
+      ".parent-name"
+    ),
+
+    card.querySelector(
+      ".parent-relationship"
+    ),
+
+    card.querySelector(
+      ".parent-email"
+    ),
+
+    card.querySelector(
+      ".parent-phone"
+    )
+
+  ];
+
+  const secondEmergency =
+    card.querySelector(
+      ".second-emergency"
+    );
+
+  const emergencyTwoName =
+    card.querySelector(
+      ".emergency-two-name"
+    );
+
+  const emergencyTwoPhone =
+    card.querySelector(
+      ".emergency-two-phone"
+    );
+
+  const removeButton =
+    card.querySelector(
+      ".remove-participant"
+    );
 
 
-    const firstName =
-        card.querySelector(
-            ".first-name"
-        );
+  function updateStudentFields(){
 
+    const isStudent =
+      studentStatus.value
+      ===
+      "yes";
 
-    const lastName =
-        card.querySelector(
-            ".last-name"
-        );
+    studentFields.style.display =
+      isStudent
+        ? "block"
+        : "none";
 
+    grade.required =
+      isStudent;
 
-    const priceBadge =
-        card.querySelector(
-            ".price-badge"
-        );
+    studentId.required =
+      isStudent;
 
-
-    const studentStatus =
-        card.querySelector(
-            ".student-status"
-        );
-
-
-    const studentFields =
-        card.querySelector(
-            ".student-fields"
-        );
-
-
-    const grade =
-        card.querySelector(
-            ".grade"
-        );
-
-
-    const studentId =
-        card.querySelector(
-            ".student-id"
-        );
-
-
-    const parentInfo =
-        card.querySelector(
-            ".parent-info"
-        );
-
-
-    const parentFields = [
-
-        card.querySelector(
-            ".parent-name"
-        ),
-
-        card.querySelector(
-            ".parent-relationship"
-        ),
-
-        card.querySelector(
-            ".parent-email"
-        ),
-
-        card.querySelector(
-            ".parent-phone"
-        )
-
-    ];
-
-
-    const secondEmergency =
-        card.querySelector(
-            ".second-emergency"
-        );
-
-
-    const emergencyTwoName =
-        card.querySelector(
-            ".emergency-two-name"
-        );
-
-
-    const emergencyTwoPhone =
-        card.querySelector(
-            ".emergency-two-phone"
-        );
-
-
-    const removeButton =
-        card.querySelector(
-            ".remove-participant"
-        );
-
-
-    function updateStudentFields(){
-
-        const isStudent =
-            studentStatus.value
-            ===
-            "yes";
-
-
-        studentFields.style.display =
-            isStudent
-            ?
-            "block"
-            :
-            "none";
-
-
-        grade.required =
-            isStudent;
-
-
-        studentId.required =
-            isStudent;
-
-
-        if(
-            !isStudent
-        ){
-
-            grade.value =
-                "";
-
-            studentId.value =
-                "";
-
-        }
-
+    if(
+      !isStudent
+    ){
+      grade.value = "";
+      studentId.value = "";
     }
 
-
-    function updateAgeRules(){
-
-        const age =
-            getAge(card);
+  }
 
 
-        const validAge =
+  function updateAgeRules(){
 
-            age !== null
-            &&
-            age >= 0
-            &&
-            age <= 120;
+    const age =
+      getAge(card);
 
+    const validAge =
+      age !== null
+      &&
+      age >= 0
+      &&
+      age <= 120;
 
-        const minor =
+    const minor =
+      validAge
+      &&
+      age <= 17;
 
-            validAge
-            &&
-            age <= 17;
+    parentInfo.style.display =
+      minor
+        ? "block"
+        : "none";
 
+    parentFields.forEach(
+      field => {
 
-        parentInfo.style.display =
-
-            minor
-            ?
-            "block"
-            :
-            "none";
-
-
-        parentFields.forEach(
-
-            field => {
-
-                field.required =
-                    minor;
-
-
-                if(
-                    !minor
-                ){
-
-                    field.value =
-                        "";
-
-                }
-
-            }
-
-        );
-
-
-        const secondContactRequired =
-
-            validAge
-            &&
-            age <= 15;
-
-
-        secondEmergency.style.display =
-
-            secondContactRequired
-            ?
-            "block"
-            :
-            "none";
-
-
-        emergencyTwoName.required =
-            secondContactRequired;
-
-
-        emergencyTwoPhone.required =
-            secondContactRequired;
-
+        field.required =
+          minor;
 
         if(
-            !secondContactRequired
+          !minor
         ){
-
-            emergencyTwoName.value =
-                "";
-
-            emergencyTwoPhone.value =
-                "";
-
+          field.value = "";
         }
 
+      }
+    );
 
-        if(
-            validAge
-        ){
+    const secondContactRequired =
+      validAge
+      &&
+      age <= 15;
 
-            const price =
-                priceForAge(age);
+    secondEmergency.style.display =
+      secondContactRequired
+        ? "block"
+        : "none";
 
+    emergencyTwoName.required =
+      secondContactRequired;
 
-            priceBadge.textContent =
+    emergencyTwoPhone.required =
+      secondContactRequired;
 
-                age <= 15
-                ?
-                "15 & Under • "
-                +
-                formatMoney(price)
-                :
-                "16+ • "
-                +
-                formatMoney(price);
-
-        }
-
-        else{
-
-            priceBadge.textContent =
-                "Enter age for price";
-
-        }
-
-
-        updatePricing();
-
-        renderConsents();
-
+    if(
+      !secondContactRequired
+    ){
+      emergencyTwoName.value = "";
+      emergencyTwoPhone.value = "";
     }
 
-
-    function setupMedicalRule(
-        statusSelector,
-        detailsSelector,
-        textSelector
+    if(
+      validAge
     ){
 
-        const status =
-            card.querySelector(
-                statusSelector
-            );
+      const price =
+        priceForAge(age);
 
-
-        const details =
-            card.querySelector(
-                detailsSelector
-            );
-
-
-        const text =
-            card.querySelector(
-                textSelector
-            );
-
-
-        function update(){
-
-            const yes =
-                status.value
-                ===
-                "yes";
-
-
-            details.style.display =
-                yes
-                ?
-                "block"
-                :
-                "none";
-
-
-            text.required =
-                yes;
-
-
-            if(
-                !yes
-            ){
-
-                text.value =
-                    "";
-
-            }
-
-        }
-
-
-        status.addEventListener(
-            "change",
-            update
-        );
-
-
-        update();
+      priceBadge.textContent =
+        age <= 15
+          ? "15 & Under • " + formatMoney(price)
+          : "16+ • " + formatMoney(price);
 
     }
 
+    else{
 
-    setupMedicalRule(
+      priceBadge.textContent =
+        "Enter age for price";
 
-        ".allergies-status",
+    }
 
-        ".allergy-details",
+    updatePricing();
+    renderConsents();
 
-        ".allergy-text"
+  }
 
+
+  function setupMedicalRule(
+    statusSelector,
+    detailsSelector,
+    textSelector
+  ){
+
+    const status =
+      card.querySelector(
+        statusSelector
+      );
+
+    const details =
+      card.querySelector(
+        detailsSelector
+      );
+
+    const text =
+      card.querySelector(
+        textSelector
+      );
+
+    function update(){
+
+      const yes =
+        status.value
+        ===
+        "yes";
+
+      details.style.display =
+        yes
+          ? "block"
+          : "none";
+
+      text.required =
+        yes;
+
+      if(
+        !yes
+      ){
+        text.value = "";
+      }
+
+    }
+
+    status.addEventListener(
+      "change",
+      update
     );
 
+    update();
 
-    setupMedicalRule(
-
-        ".conditions-status",
-
-        ".condition-details",
-
-        ".condition-text"
-
-    );
+  }
 
 
-    setupMedicalRule(
+  setupMedicalRule(
+    ".allergies-status",
+    ".allergy-details",
+    ".allergy-text"
+  );
 
-        ".medications-status",
+  setupMedicalRule(
+    ".conditions-status",
+    ".condition-details",
+    ".condition-text"
+  );
 
-        ".medication-details",
-
-        ".medication-text"
-
-    );
-
-
-    studentStatus.addEventListener(
-
-        "change",
-
-        updateStudentFields
-
-    );
-
-
-    ageInput.addEventListener(
-
-        "input",
-
-        updateAgeRules
-
-    );
+  setupMedicalRule(
+    ".medications-status",
+    ".medication-details",
+    ".medication-text"
+  );
 
 
-    firstName.addEventListener(
+  studentStatus.addEventListener(
+    "change",
+    updateStudentFields
+  );
 
-        "input",
+  ageInput.addEventListener(
+    "input",
+    updateAgeRules
+  );
 
-        renderConsents
+  firstName.addEventListener(
+    "input",
+    renderConsents
+  );
 
-    );
-
-
-    lastName.addEventListener(
-
-        "input",
-
-        renderConsents
-
-    );
-
-
-    removeButton.addEventListener(
-
-        "click",
-
-        () => {
+  lastName.addEventListener(
+    "input",
+    renderConsents
+  );
 
 
-            const cards =
-                document.querySelectorAll(
-                    ".participant"
-                );
+  removeButton.addEventListener(
+
+    "click",
+
+    () => {
+
+      const cards =
+        document.querySelectorAll(
+          ".participant"
+        );
+
+      if(
+        cards.length === 1
+      ){
+
+        showError(
+          "At least one participant is required."
+        );
+
+        return;
+
+      }
+
+      card.remove();
+
+      renumberParticipants();
+      updatePricing();
+      renderConsents();
+      clearError();
+
+    }
+
+  );
 
 
-            if(
-                cards.length === 1
-            ){
-
-                showError(
-                    "At least one participant is required."
-                );
-
-                return;
-
-            }
-
-
-            card.remove();
-
-            renumberParticipants();
-
-            updatePricing();
-
-            renderConsents();
-
-            clearError();
-
-        }
-
-    );
-
-
-    updateStudentFields();
-
-    updateAgeRules();
+  updateStudentFields();
+  updateAgeRules();
 
 }
 
 
 /* =========================================
-   RENUMBER
+   NUMBER PARTICIPANTS
 ========================================= */
 
 function renumberParticipants(){
 
-    const cards =
-        document.querySelectorAll(
-            ".participant"
-        );
-
-
-    cards.forEach(
-
-        (
-            card,
-            index
-        ) => {
-
-
-            card
-                .querySelector(
-                    ".participant-title"
-                )
-                .textContent =
-
-                "Participant "
-                +
-                (index + 1);
-
-        }
-
+  const cards =
+    document.querySelectorAll(
+      ".participant"
     );
+
+  cards.forEach(
+
+    (
+      card,
+      index
+    ) => {
+
+      card
+        .querySelector(
+          ".participant-title"
+        )
+        .textContent =
+        "Participant "
+        +
+        (index + 1);
+
+    }
+
+  );
 
 }
 
@@ -3954,140 +2701,116 @@ function renumberParticipants(){
 
 function getPricingSummary(){
 
-    const cards =
-        Array.from(
+  const cards =
+    Array.from(
 
-            document.querySelectorAll(
-                ".participant"
-            )
-
-        );
-
-
-    let youthCount =
-        0;
-
-
-    let standardCount =
-        0;
-
-
-    cards.forEach(
-
-        card => {
-
-
-            const age =
-                getAge(card);
-
-
-            if(
-                age === null
-                ||
-                age < 0
-                ||
-                age > 120
-            ){
-
-                return;
-
-            }
-
-
-            if(
-                age <= 15
-            ){
-
-                youthCount++;
-
-            }
-
-            else{
-
-                standardCount++;
-
-            }
-
-        }
+      document.querySelectorAll(
+        ".participant"
+      )
 
     );
 
+  let youthCount = 0;
+  let standardCount = 0;
 
-    const youthSubtotal =
-        youthCount
-        *
-        YOUTH_PRICE;
+  cards.forEach(
 
+    card => {
 
-    const standardSubtotal =
-        standardCount
-        *
-        STANDARD_PRICE;
+      const age =
+        getAge(card);
 
+      if(
+        age === null
+        ||
+        age < 0
+        ||
+        age > 120
+      ){
+        return;
+      }
 
-    return {
+      if(
+        age <= 15
+      ){
+        youthCount++;
+      }
 
-        participantCount:
-            cards.length,
+      else{
+        standardCount++;
+      }
 
-        youthCount:
-            youthCount,
+    }
 
-        standardCount:
-            standardCount,
+  );
 
-        youthSubtotal:
-            youthSubtotal,
+  const youthSubtotal =
+    youthCount
+    *
+    YOUTH_PRICE;
 
-        standardSubtotal:
-            standardSubtotal,
+  const standardSubtotal =
+    standardCount
+    *
+    STANDARD_PRICE;
 
-        total:
-            youthSubtotal
-            +
-            standardSubtotal
+  return {
 
-    };
+    participantCount:
+      cards.length,
+
+    youthCount:
+      youthCount,
+
+    standardCount:
+      standardCount,
+
+    youthSubtotal:
+      youthSubtotal,
+
+    standardSubtotal:
+      standardSubtotal,
+
+    total:
+      youthSubtotal
+      +
+      standardSubtotal
+
+  };
 
 }
 
 
 function updatePricing(){
 
-    const pricing =
-        getPricingSummary();
+  const pricing =
+    getPricingSummary();
 
+  participantCount.textContent =
+    pricing.participantCount;
 
-    participantCount.textContent =
-        pricing.participantCount;
+  youthBreakdown.textContent =
+    pricing.youthCount
+    +
+    " × $10 = "
+    +
+    formatMoney(
+      pricing.youthSubtotal
+    );
 
+  standardBreakdown.textContent =
+    pricing.standardCount
+    +
+    " × $20 = "
+    +
+    formatMoney(
+      pricing.standardSubtotal
+    );
 
-    youthBreakdown.textContent =
-
-        pricing.youthCount
-        +
-        " × $10 = "
-        +
-        formatMoney(
-            pricing.youthSubtotal
-        );
-
-
-    standardBreakdown.textContent =
-
-        pricing.standardCount
-        +
-        " × $20 = "
-        +
-        formatMoney(
-            pricing.standardSubtotal
-        );
-
-
-    registrationTotal.textContent =
-        formatMoney(
-            pricing.total
-        );
+  registrationTotal.textContent =
+    formatMoney(
+      pricing.total
+    );
 
 }
 
@@ -4098,666 +2821,592 @@ function updatePricing(){
 
 function renderConsents(){
 
-    const previousChecks =
-        {};
-
-
-    consentContainer
-        .querySelectorAll(
-            "[data-consent-for]"
-        )
-        .forEach(
-
-            checkbox => {
-
-                previousChecks[
-                    checkbox.dataset.consentFor
-                ] =
-                    checkbox.checked;
-
-            }
-
-        );
-
-
-    consentContainer.innerHTML =
-        "";
-
-
-    const cards =
-        Array.from(
-
-            document.querySelectorAll(
-                ".participant"
-            )
-
-        );
-
-
-    cards.forEach(
-
-        (
-            card,
-            index
-        ) => {
-
-
-            const id =
-                card.dataset.participantId;
-
-
-            const age =
-                getAge(card);
-
-
-            const firstName =
-                card
-                    .querySelector(
-                        ".first-name"
-                    )
-                    .value
-                    .trim();
-
-
-            const lastName =
-                card
-                    .querySelector(
-                        ".last-name"
-                    )
-                    .value
-                    .trim();
-
-
-            const participantName =
-
-                (
-                    firstName
-                    +
-                    " "
-                    +
-                    lastName
-                )
-                .trim()
-
-                ||
-
-                (
-                    "Participant "
-                    +
-                    (index + 1)
-                );
-
-
-            const consentCard =
-                document.createElement(
-                    "div"
-                );
-
-
-            consentCard.className =
-                "consent-card";
-
-
-            if(
-                age === null
-                ||
-                age < 0
-                ||
-                age > 120
-            ){
-
-                consentCard.innerHTML = `
-
-                    <strong>
-                        ${escapeHtml(participantName)}
-                    </strong>
-
-                    <p>
-                        Enter this participant's age above to generate
-                        the correct consent statement.
-                    </p>
-
-                `;
-
-
-                consentContainer
-                    .appendChild(
-                        consentCard
-                    );
-
-
-                return;
-
-            }
-
-
-            const minor =
-                age <= 17;
-
-
-            const checkboxId =
-                "consent-"
-                +
-                id;
-
-
-            const wording = minor
-
-                ?
-
-                `I confirm that I am the parent or legal guardian of ${escapeHtml(participantName)}. I have read and understood the waiver, acknowledge the risks associated with the Cypress Creek SGA 5K Fun Run/Walk, authorize emergency medical assistance if necessary, and voluntarily give permission for this participant to take part. I understand that this consent does not waive rights or liabilities that cannot legally be waived.`
-
-                :
-
-                `I confirm that I have read and understood the waiver, acknowledge the risks associated with the Cypress Creek SGA 5K Fun Run/Walk, authorize emergency medical assistance if necessary, and voluntarily consent to participate. I understand that this consent does not waive rights or liabilities that cannot legally be waived.`;
-
-
-            consentCard.innerHTML = `
-
-                <strong>
-
-                    ${
-                        minor
-                        ?
-                        "Parent / Guardian Consent"
-                        :
-                        "Adult Participant Consent"
-                    }
-
-                    — ${escapeHtml(participantName)}
-
-                </strong>
-
-
-                <p>
-                    ${wording}
-                </p>
-
-
-                <div class="check-row">
-
-                    <input
-                        type="checkbox"
-                        id="${checkboxId}"
-                        data-consent-for="${id}"
-                        required
-                    >
-
-                    <label for="${checkboxId}">
-
-                        I have read, understood, and agree to the statement above.
-
-                        <span class="required">*</span>
-
-                    </label>
-
-                </div>
-
-            `;
-
-
-            consentContainer
-                .appendChild(
-                    consentCard
-                );
-
-
-            const checkbox =
-                consentCard.querySelector(
-                    "input[type='checkbox']"
-                );
-
-
-            checkbox.checked =
-                previousChecks[id]
-                ||
-                false;
-
-        }
+  const previousChecks =
+    {};
+
+  consentContainer
+    .querySelectorAll(
+      "[data-consent-for]"
+    )
+    .forEach(
+
+      checkbox => {
+
+        previousChecks[
+          checkbox.dataset.consentFor
+        ] =
+          checkbox.checked;
+
+      }
 
     );
+
+  consentContainer.innerHTML =
+    "";
+
+  const cards =
+    Array.from(
+
+      document.querySelectorAll(
+        ".participant"
+      )
+
+    );
+
+  cards.forEach(
+
+    (
+      card,
+      index
+    ) => {
+
+      const id =
+        card.dataset.participantId;
+
+      const age =
+        getAge(card);
+
+      const firstName =
+        card
+          .querySelector(
+            ".first-name"
+          )
+          .value
+          .trim();
+
+      const lastName =
+        card
+          .querySelector(
+            ".last-name"
+          )
+          .value
+          .trim();
+
+      const participantName =
+        (
+          firstName
+          +
+          " "
+          +
+          lastName
+        )
+        .trim()
+        ||
+        (
+          "Participant "
+          +
+          (index + 1)
+        );
+
+      const consentCard =
+        document.createElement(
+          "div"
+        );
+
+      consentCard.className =
+        "consent-card";
+
+      if(
+        age === null
+        ||
+        age < 0
+        ||
+        age > 120
+      ){
+
+        consentCard.innerHTML = `
+
+          <strong>
+            ${escapeHtml(participantName)}
+          </strong>
+
+          <p>
+            Enter this participant's age above to generate
+            the correct consent statement.
+          </p>
+
+        `;
+
+        consentContainer
+          .appendChild(
+            consentCard
+          );
+
+        return;
+
+      }
+
+      const minor =
+        age <= 17;
+
+      const checkboxId =
+        "consent-"
+        +
+        id;
+
+      const wording =
+        minor
+          ? `I confirm that I am the parent or legal guardian of ${escapeHtml(participantName)}. I have read and understood the waiver, acknowledge the risks associated with the Cypress Creek SGA 5K Fun Run/Walk, authorize emergency medical assistance if necessary, and voluntarily give permission for this participant to take part. I understand that this consent does not waive rights or liabilities that cannot legally be waived.`
+          : `I confirm that I have read and understood the waiver, acknowledge the risks associated with the Cypress Creek SGA 5K Fun Run/Walk, authorize emergency medical assistance if necessary, and voluntarily consent to participate. I understand that this consent does not waive rights or liabilities that cannot legally be waived.`;
+
+      consentCard.innerHTML = `
+
+        <strong>
+
+          ${
+            minor
+              ? "Parent / Guardian Consent"
+              : "Adult Participant Consent"
+          }
+
+          — ${escapeHtml(participantName)}
+
+        </strong>
+
+        <p>
+          ${wording}
+        </p>
+
+        <div class="check-row">
+
+          <input
+            type="checkbox"
+            id="${checkboxId}"
+            data-consent-for="${id}"
+            required
+          >
+
+          <label for="${checkboxId}">
+
+            I have read, understood, and agree to the statement above.
+
+            <span class="required">*</span>
+
+          </label>
+
+        </div>
+
+      `;
+
+      consentContainer
+        .appendChild(
+          consentCard
+        );
+
+      const checkbox =
+        consentCard.querySelector(
+          "input[type='checkbox']"
+        );
+
+      checkbox.checked =
+        previousChecks[id]
+        ||
+        false;
+
+    }
+
+  );
 
 }
 
 
 /* =========================================
-   COLLECT PARTICIPANT DATA
+   PARTICIPANT DATA
 ========================================= */
 
 function getParticipantData(card){
 
-    const age =
-        getAge(card);
-
-
-    const consentCheckbox =
-        document.querySelector(
-
-            `[data-consent-for="${card.dataset.participantId}"]`
-
-        );
-
-
-    const minor =
-        age !== null
-        &&
-        age <= 17;
-
-
-    const price =
-        priceForAge(age);
-
-
-    return {
-
-        firstName:
-            card
-                .querySelector(
-                    ".first-name"
-                )
-                .value
-                .trim(),
-
-        lastName:
-            card
-                .querySelector(
-                    ".last-name"
-                )
-                .value
-                .trim(),
-
-        email:
-            card
-                .querySelector(
-                    ".participant-email"
-                )
-                .value
-                .trim(),
-
-        phone:
-            card
-                .querySelector(
-                    ".participant-phone"
-                )
-                .value
-                .trim(),
-
-        age:
-            age,
-
-        price:
-            price,
-
-        paymentGroup:
-
-            age <= 15
-            ?
-            "15_and_under"
-            :
-            "16_and_over",
-
-        gofanUrl:
-
-            age <= 15
-            ?
-            GOFAN_15_AND_UNDER_URL
-            :
-            GOFAN_16_AND_OVER_URL,
-
-        isStudent:
-
-            card
-                .querySelector(
-                    ".student-status"
-                )
-                .value
-
-            ===
-
-            "yes",
-
-        grade:
-            card
-                .querySelector(
-                    ".grade"
-                )
-                .value,
-
-        studentId:
-            card
-                .querySelector(
-                    ".student-id"
-                )
-                .value
-                .trim(),
-
-        parentGuardian:{
-
-            name:
-                card
-                    .querySelector(
-                        ".parent-name"
-                    )
-                    .value
-                    .trim(),
-
-            relationship:
-                card
-                    .querySelector(
-                        ".parent-relationship"
-                    )
-                    .value
-                    .trim(),
-
-            email:
-                card
-                    .querySelector(
-                        ".parent-email"
-                    )
-                    .value
-                    .trim(),
-
-            phone:
-                card
-                    .querySelector(
-                        ".parent-phone"
-                    )
-                    .value
-                    .trim()
-
-        },
-
-        emergencyContactOne:{
-
-            name:
-                card
-                    .querySelector(
-                        ".emergency-one-name"
-                    )
-                    .value
-                    .trim(),
-
-            phone:
-                card
-                    .querySelector(
-                        ".emergency-one-phone"
-                    )
-                    .value
-                    .trim()
-
-        },
-
-        emergencyContactTwo:{
-
-            name:
-                card
-                    .querySelector(
-                        ".emergency-two-name"
-                    )
-                    .value
-                    .trim(),
-
-            phone:
-                card
-                    .querySelector(
-                        ".emergency-two-phone"
-                    )
-                    .value
-                    .trim()
-
-        },
-
-        medical:{
-
-            allergies:
-
-                card
-                    .querySelector(
-                        ".allergies-status"
-                    )
-                    .value,
-
-            allergyDetails:
-
-                card
-                    .querySelector(
-                        ".allergy-text"
-                    )
-                    .value
-                    .trim(),
-
-            medicalConditions:
-
-                card
-                    .querySelector(
-                        ".conditions-status"
-                    )
-                    .value,
-
-            medicalConditionDetails:
-
-                card
-                    .querySelector(
-                        ".condition-text"
-                    )
-                    .value
-                    .trim(),
-
-            medications:
-
-                card
-                    .querySelector(
-                        ".medications-status"
-                    )
-                    .value,
-
-            medicationDetails:
-
-                card
-                    .querySelector(
-                        ".medication-text"
-                    )
-                    .value
-                    .trim(),
-
-            otherInformation:
-
-                card
-                    .querySelector(
-                        ".other-medical"
-                    )
-                    .value
-                    .trim()
-
-        },
-
-        waiverType:
-
-            minor
-            ?
-            "parent_guardian"
-            :
-            "adult_self_consent",
-
-        waiverAccepted:
-
-            consentCheckbox
-            ?
-            consentCheckbox.checked
-            :
-            false,
-
-        parentGuardianConsent:
-
-            minor
-            &&
-            consentCheckbox
-            ?
-            consentCheckbox.checked
-            :
-            false,
-
-        adultConsent:
-
-            !minor
-            &&
-            consentCheckbox
-            ?
-            consentCheckbox.checked
-            :
-            false,
-
-        requiresAdditionalYoungChildWaiver:
-            false
-
-    };
+  const age =
+    getAge(card);
+
+  const consentCheckbox =
+    document.querySelector(
+
+      `[data-consent-for="${card.dataset.participantId}"]`
+
+    );
+
+  const minor =
+    age !== null
+    &&
+    age <= 17;
+
+  const price =
+    priceForAge(age);
+
+  return {
+
+    firstName:
+      card
+        .querySelector(
+          ".first-name"
+        )
+        .value
+        .trim(),
+
+    lastName:
+      card
+        .querySelector(
+          ".last-name"
+        )
+        .value
+        .trim(),
+
+    email:
+      card
+        .querySelector(
+          ".participant-email"
+        )
+        .value
+        .trim(),
+
+    phone:
+      card
+        .querySelector(
+          ".participant-phone"
+        )
+        .value
+        .trim(),
+
+    age:
+      age,
+
+    price:
+      price,
+
+    paymentGroup:
+      age <= 15
+        ? "15_and_under"
+        : "16_and_over",
+
+    gofanUrl:
+      age <= 15
+        ? GOFAN_15_AND_UNDER_URL
+        : GOFAN_16_AND_OVER_URL,
+
+    isStudent:
+      card
+        .querySelector(
+          ".student-status"
+        )
+        .value
+      ===
+      "yes",
+
+    grade:
+      card
+        .querySelector(
+          ".grade"
+        )
+        .value,
+
+    studentId:
+      card
+        .querySelector(
+          ".student-id"
+        )
+        .value
+        .trim(),
+
+    parentGuardian:{
+
+      name:
+        card
+          .querySelector(
+            ".parent-name"
+          )
+          .value
+          .trim(),
+
+      relationship:
+        card
+          .querySelector(
+            ".parent-relationship"
+          )
+          .value
+          .trim(),
+
+      email:
+        card
+          .querySelector(
+            ".parent-email"
+          )
+          .value
+          .trim(),
+
+      phone:
+        card
+          .querySelector(
+            ".parent-phone"
+          )
+          .value
+          .trim()
+
+    },
+
+    emergencyContactOne:{
+
+      name:
+        card
+          .querySelector(
+            ".emergency-one-name"
+          )
+          .value
+          .trim(),
+
+      phone:
+        card
+          .querySelector(
+            ".emergency-one-phone"
+          )
+          .value
+          .trim()
+
+    },
+
+    emergencyContactTwo:{
+
+      name:
+        card
+          .querySelector(
+            ".emergency-two-name"
+          )
+          .value
+          .trim(),
+
+      phone:
+        card
+          .querySelector(
+            ".emergency-two-phone"
+          )
+          .value
+          .trim()
+
+    },
+
+    medical:{
+
+      allergies:
+        card
+          .querySelector(
+            ".allergies-status"
+          )
+          .value,
+
+      allergyDetails:
+        card
+          .querySelector(
+            ".allergy-text"
+          )
+          .value
+          .trim(),
+
+      medicalConditions:
+        card
+          .querySelector(
+            ".conditions-status"
+          )
+          .value,
+
+      medicalConditionDetails:
+        card
+          .querySelector(
+            ".condition-text"
+          )
+          .value
+          .trim(),
+
+      medications:
+        card
+          .querySelector(
+            ".medications-status"
+          )
+          .value,
+
+      medicationDetails:
+        card
+          .querySelector(
+            ".medication-text"
+          )
+          .value
+          .trim(),
+
+      otherInformation:
+        card
+          .querySelector(
+            ".other-medical"
+          )
+          .value
+          .trim()
+
+    },
+
+    waiverType:
+      minor
+        ? "parent_guardian"
+        : "adult_self_consent",
+
+    waiverAccepted:
+      consentCheckbox
+        ? consentCheckbox.checked
+        : false,
+
+    parentGuardianConsent:
+      minor
+      &&
+      consentCheckbox
+        ? consentCheckbox.checked
+        : false,
+
+    adultConsent:
+      !minor
+      &&
+      consentCheckbox
+        ? consentCheckbox.checked
+        : false,
+
+    requiresAdditionalYoungChildWaiver:
+      false
+
+  };
 
 }
 
 
 /* =========================================
-   COLLECT REGISTRATION
+   REGISTRATION DATA
 ========================================= */
 
 function collectRegistration(){
 
-    const participants =
-        Array
-            .from(
+  const participants =
+    Array.from(
 
-                document.querySelectorAll(
-                    ".participant"
-                )
+      document.querySelectorAll(
+        ".participant"
+      )
 
-            )
-            .map(
-                getParticipantData
-            );
+    )
+    .map(
+      getParticipantData
+    );
 
+  const youthParticipants =
+    participants.filter(
+      participant =>
+        participant.age <= 15
+    );
 
-    const youthParticipants =
+  const standardParticipants =
+    participants.filter(
+      participant =>
+        participant.age >= 16
+    );
 
-        participants.filter(
-            participant =>
-                participant.age <= 15
-        );
+  const youthSubtotal =
+    youthParticipants.length
+    *
+    YOUTH_PRICE;
 
+  const standardSubtotal =
+    standardParticipants.length
+    *
+    STANDARD_PRICE;
 
-    const standardParticipants =
+  return {
 
-        participants.filter(
-            participant =>
-                participant.age >= 16
-        );
+    registrationId:
+      createRegistrationId(),
 
+    submittedAt:
+      new Date().toISOString(),
 
-    const youthSubtotal =
-        youthParticipants.length
-        *
-        YOUTH_PRICE;
+    eventName:
+      "Cypress Creek SGA 5K Fun Run/Walk",
 
+    registrant:{
 
-    const standardSubtotal =
-        standardParticipants.length
-        *
-        STANDARD_PRICE;
+      name:
+        document
+          .getElementById(
+            "registrantName"
+          )
+          .value
+          .trim(),
 
+      email:
+        document
+          .getElementById(
+            "registrantEmail"
+          )
+          .value
+          .trim(),
 
-    return {
+      phone:
+        document
+          .getElementById(
+            "registrantPhone"
+          )
+          .value
+          .trim()
 
-        registrationId:
-            createRegistrationId(),
+    },
 
-        submittedAt:
-            new Date().toISOString(),
+    participants:
+      participants,
 
-        eventName:
-            "Cypress Creek SGA 5K Fun Run/Walk",
+    participantCount:
+      participants.length,
 
-        registrant:{
+    youthParticipantCount:
+      youthParticipants.length,
 
-            name:
-                document
-                    .getElementById(
-                        "registrantName"
-                    )
-                    .value
-                    .trim(),
+    standardParticipantCount:
+      standardParticipants.length,
 
-            email:
-                document
-                    .getElementById(
-                        "registrantEmail"
-                    )
-                    .value
-                    .trim(),
+    youthPrice:
+      YOUTH_PRICE,
 
-            phone:
-                document
-                    .getElementById(
-                        "registrantPhone"
-                    )
-                    .value
-                    .trim()
+    standardPrice:
+      STANDARD_PRICE,
 
-        },
+    youthSubtotal:
+      youthSubtotal,
 
-        participants:
-            participants,
+    standardSubtotal:
+      standardSubtotal,
 
-        participantCount:
-            participants.length,
+    total:
+      youthSubtotal
+      +
+      standardSubtotal,
 
-        youthParticipantCount:
-            youthParticipants.length,
+    pricingDescription:
+      "Age 15 and under: $10; Age 16 and older: $20",
 
-        standardParticipantCount:
-            standardParticipants.length,
+    waiverAccepted:
+      participants.every(
+        participant =>
+          participant.waiverAccepted
+      ),
 
-        youthPrice:
-            YOUTH_PRICE,
+    paymentMethod:
+      "GoFan",
 
-        standardPrice:
-            STANDARD_PRICE,
+    gofanLinks:{
 
-        youthSubtotal:
-            youthSubtotal,
+      fifteenAndUnder:
+        GOFAN_15_AND_UNDER_URL,
 
-        standardSubtotal:
-            standardSubtotal,
+      sixteenAndOlder:
+        GOFAN_16_AND_OVER_URL
 
-        total:
-            youthSubtotal
-            +
-            standardSubtotal,
+    },
 
-        pricingDescription:
-            "Age 15 and under: $10; Age 16 and older: $20",
+    paymentVerified:
+      false
 
-        waiverAccepted:
-
-            participants.every(
-                participant =>
-                    participant.waiverAccepted
-            ),
-
-        paymentMethod:
-            "GoFan",
-
-        gofanLinks:{
-
-            fifteenAndUnder:
-                GOFAN_15_AND_UNDER_URL,
-
-            sixteenAndOlder:
-                GOFAN_16_AND_OVER_URL
-
-        },
-
-        paymentVerified:
-            false
-
-    };
+  };
 
 }
 
@@ -4768,233 +3417,211 @@ function collectRegistration(){
 
 function validateRegistration(data){
 
-    for(
-        const participant
-        of
-        data.participants
+  for(
+    const participant
+    of
+    data.participants
+  ){
+
+    const name =
+      participant.firstName
+      ||
+      "participant";
+
+    if(
+      participant.age === null
+      ||
+      !Number.isFinite(
+        participant.age
+      )
+      ||
+      participant.age < 0
+      ||
+      participant.age > 120
     ){
 
-        const name =
-
-            participant.firstName
-            ||
-            "participant";
-
-
-        if(
-            participant.age === null
-            ||
-            !Number.isFinite(
-                participant.age
-            )
-            ||
-            participant.age < 0
-            ||
-            participant.age > 120
-        ){
-
-            return (
-                "Please enter a valid age for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            !participant.waiverAccepted
-        ){
-
-            return (
-                "The required waiver and consent must be accepted for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            participant.age <= 17
-        ){
-
-            const guardian =
-                participant.parentGuardian;
-
-
-            if(
-                !guardian.name
-                ||
-                !guardian.relationship
-                ||
-                !guardian.email
-                ||
-                !guardian.phone
-            ){
-
-                return (
-                    "Complete the parent/legal guardian information for "
-                    +
-                    name
-                    +
-                    "."
-                );
-
-            }
-
-        }
-
-
-        if(
-            participant.isStudent
-            &&
-            (
-                !participant.grade
-                ||
-                !participant.studentId
-            )
-        ){
-
-            return (
-                "Enter the grade and student ID for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            !participant
-                .emergencyContactOne
-                .name
-
-            ||
-
-            !participant
-                .emergencyContactOne
-                .phone
-        ){
-
-            return (
-                "Complete Emergency Contact 1 for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            participant.age <= 15
-            &&
-            (
-                !participant
-                    .emergencyContactTwo
-                    .name
-
-                ||
-
-                !participant
-                    .emergencyContactTwo
-                    .phone
-            )
-        ){
-
-            return (
-                name
-                +
-                " is age 15 or younger and needs a second emergency contact."
-            );
-
-        }
-
-
-        if(
-            participant.medical.allergies
-            ===
-            "yes"
-
-            &&
-
-            !participant
-                .medical
-                .allergyDetails
-        ){
-
-            return (
-                "Enter the allergy information for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            participant
-                .medical
-                .medicalConditions
-            ===
-            "yes"
-
-            &&
-
-            !participant
-                .medical
-                .medicalConditionDetails
-        ){
-
-            return (
-                "Enter the medical condition information for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
-
-
-        if(
-            participant
-                .medical
-                .medications
-            ===
-            "yes"
-
-            &&
-
-            !participant
-                .medical
-                .medicationDetails
-        ){
-
-            return (
-                "Enter the medication information for "
-                +
-                name
-                +
-                "."
-            );
-
-        }
+      return (
+        "Please enter a valid age for "
+        +
+        name
+        +
+        "."
+      );
 
     }
 
+    if(
+      !participant.waiverAccepted
+    ){
 
-    return "";
+      return (
+        "The required waiver and consent must be accepted for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+    if(
+      participant.age <= 17
+    ){
+
+      const guardian =
+        participant.parentGuardian;
+
+      if(
+        !guardian.name
+        ||
+        !guardian.relationship
+        ||
+        !guardian.email
+        ||
+        !guardian.phone
+      ){
+
+        return (
+          "Complete the parent/legal guardian information for "
+          +
+          name
+          +
+          "."
+        );
+
+      }
+
+    }
+
+    if(
+      participant.isStudent
+      &&
+      (
+        !participant.grade
+        ||
+        !participant.studentId
+      )
+    ){
+
+      return (
+        "Enter the grade and student ID for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+    if(
+      !participant
+        .emergencyContactOne
+        .name
+      ||
+      !participant
+        .emergencyContactOne
+        .phone
+    ){
+
+      return (
+        "Complete Emergency Contact 1 for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+    if(
+      participant.age <= 15
+      &&
+      (
+        !participant
+          .emergencyContactTwo
+          .name
+        ||
+        !participant
+          .emergencyContactTwo
+          .phone
+      )
+    ){
+
+      return (
+        name
+        +
+        " is age 15 or younger and needs a second emergency contact."
+      );
+
+    }
+
+    if(
+      participant.medical.allergies
+      ===
+      "yes"
+      &&
+      !participant
+        .medical
+        .allergyDetails
+    ){
+
+      return (
+        "Enter the allergy information for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+    if(
+      participant
+        .medical
+        .medicalConditions
+      ===
+      "yes"
+      &&
+      !participant
+        .medical
+        .medicalConditionDetails
+    ){
+
+      return (
+        "Enter the medical condition information for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+    if(
+      participant
+        .medical
+        .medications
+      ===
+      "yes"
+      &&
+      !participant
+        .medical
+        .medicationDetails
+    ){
+
+      return (
+        "Enter the medication information for "
+        +
+        name
+        +
+        "."
+      );
+
+    }
+
+  }
+
+  return "";
 
 }
 
@@ -5005,39 +3632,32 @@ function validateRegistration(data){
 
 function showError(message){
 
-    errorBox.className =
-        "alert error";
+  errorBox.className =
+    "alert error";
 
+  errorBox.textContent =
+    message;
 
-    errorBox.textContent =
-        message;
+  errorBox.style.display =
+    "block";
 
+  errorBox.scrollIntoView({
 
-    errorBox.style.display =
-        "block";
+    behavior:"smooth",
+    block:"center"
 
-
-    errorBox.scrollIntoView({
-
-        behavior:
-            "smooth",
-
-        block:
-            "center"
-
-    });
+  });
 
 }
 
 
 function clearError(){
 
-    errorBox.style.display =
-        "none";
+  errorBox.style.display =
+    "none";
 
-
-    errorBox.textContent =
-        "";
+  errorBox.textContent =
+    "";
 
 }
 
@@ -5048,52 +3668,42 @@ function clearError(){
 
 async function sendToGoogleSheet(data){
 
-    if(
-        !GOOGLE_SHEET_WEB_APP_URL
-        ||
-        !GOOGLE_SHEET_WEB_APP_URL
-            .startsWith(
-                "https://script.google.com/"
-            )
-    ){
+  if(
+    !GOOGLE_SHEET_WEB_APP_URL
+    ||
+    !GOOGLE_SHEET_WEB_APP_URL
+      .startsWith(
+        "https://script.google.com/"
+      )
+  ){
 
-        throw new Error(
-            "Google Sheets connection is not configured."
-        );
+    throw new Error(
+      "Google Sheets connection is not configured."
+    );
 
+  }
+
+  await fetch(
+
+    GOOGLE_SHEET_WEB_APP_URL,
+
+    {
+      method:"POST",
+      mode:"no-cors",
+      cache:"no-store",
+
+      headers:{
+        "Content-Type":
+          "text/plain;charset=utf-8"
+      },
+
+      body:
+        JSON.stringify(
+          data
+        )
     }
 
-
-    await fetch(
-
-        GOOGLE_SHEET_WEB_APP_URL,
-
-        {
-
-            method:
-                "POST",
-
-            mode:
-                "no-cors",
-
-            cache:
-                "no-store",
-
-            headers:{
-
-                "Content-Type":
-                    "text/plain;charset=utf-8"
-
-            },
-
-            body:
-                JSON.stringify(
-                    data
-                )
-
-        }
-
-    );
+  );
 
 }
 
@@ -5104,315 +3714,262 @@ async function sendToGoogleSheet(data){
 
 function showConfirmation(data){
 
-    document
-        .getElementById(
-            "confirmId"
-        )
-        .textContent =
-        data.registrationId;
+  document
+    .getElementById(
+      "confirmId"
+    )
+    .textContent =
+    data.registrationId;
 
+  document
+    .getElementById(
+      "confirmCount"
+    )
+    .textContent =
+    data.participantCount;
 
-    document
-        .getElementById(
-            "confirmCount"
-        )
-        .textContent =
-        data.participantCount;
+  document
+    .getElementById(
+      "confirmTotal"
+    )
+    .textContent =
+    formatMoney(
+      data.total
+    );
 
+  document
+    .getElementById(
+      "confirmNames"
+    )
+    .innerHTML =
+    "<strong>Registered Participants</strong>"
+    +
+    data.participants
+      .map(
 
-    document
-        .getElementById(
-            "confirmTotal"
-        )
-        .textContent =
-        formatMoney(
-            data.total
-        );
+        participant => `
 
+          <p>
 
-    document
-        .getElementById(
-            "confirmNames"
-        )
-        .innerHTML =
+            ${escapeHtml(participant.firstName)}
+            ${escapeHtml(participant.lastName)}
 
-        "<strong>Registered Participants</strong>"
+            —
+            Age ${participant.age}
 
-        +
+            —
+            ${formatMoney(participant.price)}
 
-        data.participants
-            .map(
+          </p>
 
-                participant => `
+        `
 
-                    <p>
+      )
+      .join("");
 
-                        ${escapeHtml(participant.firstName)}
-                        ${escapeHtml(participant.lastName)}
+  const paymentGroups =
+    document.getElementById(
+      "paymentGroups"
+    );
 
-                        —
-                        Age ${participant.age}
+  let paymentHtml =
+    "";
 
-                        —
-                        ${formatMoney(participant.price)}
+  if(
+    data.youthParticipantCount > 0
+  ){
 
-                    </p>
+    paymentHtml += `
 
-                `
+      <div class="payment-group">
 
-            )
-            .join("");
+        <strong>
+          Ages 15 & Under
+        </strong>
 
+        <p>
+          ${data.youthParticipantCount}
+          participant(s)
+          ×
+          $10
+          =
+          ${formatMoney(data.youthSubtotal)}
+        </p>
 
-    const paymentGroups =
-        document.getElementById(
-            "paymentGroups"
-        );
+        <a
+          class="payment-button"
+          href="${GOFAN_15_AND_UNDER_URL}"
+          target="_blank"
+          rel="noopener"
+        >
+          Pay 15 & Under Registration
+        </a>
 
+      </div>
 
-    let paymentHtml =
-        "";
+    `;
 
+  }
 
-    if(
-        data.youthParticipantCount > 0
-    ){
+  if(
+    data.standardParticipantCount > 0
+  ){
 
-        paymentHtml += `
+    paymentHtml += `
 
-            <div class="payment-group">
+      <div class="payment-group">
 
-                <strong>
-                    Ages 15 & Under
-                </strong>
+        <strong>
+          Ages 16 & Older
+        </strong>
 
-                <p>
+        <p>
+          ${data.standardParticipantCount}
+          participant(s)
+          ×
+          $20
+          =
+          ${formatMoney(data.standardSubtotal)}
+        </p>
 
-                    ${data.youthParticipantCount}
-                    participant(s)
-                    ×
-                    $10
-                    =
-                    ${formatMoney(data.youthSubtotal)}
+        <a
+          class="payment-button"
+          href="${GOFAN_16_AND_OVER_URL}"
+          target="_blank"
+          rel="noopener"
+        >
+          Pay 16 & Older Registration
+        </a>
 
-                </p>
+      </div>
 
-                <a
-                    class="payment-button"
-                    href="${GOFAN_15_AND_UNDER_URL}"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Pay 15 & Under Registration
-                </a>
+    `;
 
-            </div>
+  }
 
-        `;
+  paymentGroups.innerHTML =
+    paymentHtml;
 
-    }
+  form.style.display =
+    "none";
 
+  confirmation
+    .classList
+    .add(
+      "show"
+    );
 
-    if(
-        data.standardParticipantCount > 0
-    ){
-
-        paymentHtml += `
-
-            <div class="payment-group">
-
-                <strong>
-                    Ages 16 & Older
-                </strong>
-
-                <p>
-
-                    ${data.standardParticipantCount}
-                    participant(s)
-                    ×
-                    $20
-                    =
-                    ${formatMoney(data.standardSubtotal)}
-
-                </p>
-
-                <a
-                    class="payment-button"
-                    href="${GOFAN_16_AND_OVER_URL}"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    Pay 16 & Older Registration
-                </a>
-
-            </div>
-
-        `;
-
-    }
-
-
-    paymentGroups.innerHTML =
-        paymentHtml;
-
-
-    form.style.display =
-        "none";
-
-
-    confirmation
-        .classList
-        .add(
-            "show"
-        );
-
-
-    window.scrollTo({
-
-        top:
-            0,
-
-        behavior:
-            "smooth"
-
-    });
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
 }
 
 
 /* =========================================
-   FORM SUBMIT
+   FORM SUBMISSION
 ========================================= */
 
 document
-    .getElementById(
-        "addParticipantBtn"
-    )
-    .addEventListener(
-
-        "click",
-
-        createParticipant
-
-    );
+  .getElementById(
+    "addParticipantBtn"
+  )
+  .addEventListener(
+    "click",
+    createParticipant
+  );
 
 
 form.addEventListener(
 
-    "submit",
+  "submit",
 
-    async event => {
+  async event => {
 
+    event.preventDefault();
 
-        event.preventDefault();
+    clearError();
 
-        clearError();
+    renderConsents();
 
+    if(
+      !form.checkValidity()
+    ){
 
-        if(
-            !navigator.onLine
-        ){
+      form.reportValidity();
 
-            showError(
-                "You are offline. Connect to the internet before submitting the registration."
-            );
-
-            return;
-
-        }
-
-
-        renderConsents();
-
-
-        if(
-            !form.checkValidity()
-        ){
-
-            form.reportValidity();
-
-            return;
-
-        }
-
-
-        const data =
-            collectRegistration();
-
-
-        const validationError =
-            validateRegistration(
-                data
-            );
-
-
-        if(
-            validationError
-        ){
-
-            showError(
-                validationError
-            );
-
-            return;
-
-        }
-
-
-        submitButton.disabled =
-            true;
-
-
-        submitStatus
-            .classList
-            .add(
-                "show"
-            );
-
-
-        try{
-
-            await sendToGoogleSheet(
-                data
-            );
-
-
-            showConfirmation(
-                data
-            );
-
-        }
-
-        catch(error){
-
-            console.error(
-                error
-            );
-
-
-            showError(
-
-                "The registration could not be sent. Please check your internet connection and try again."
-
-            );
-
-        }
-
-        finally{
-
-            submitButton.disabled =
-                false;
-
-
-            submitStatus
-                .classList
-                .remove(
-                    "show"
-                );
-
-        }
+      return;
 
     }
+
+    const data =
+      collectRegistration();
+
+    const validationError =
+      validateRegistration(
+        data
+      );
+
+    if(
+      validationError
+    ){
+
+      showError(
+        validationError
+      );
+
+      return;
+
+    }
+
+    submitButton.disabled =
+      true;
+
+    submitStatus
+      .classList
+      .add(
+        "show"
+      );
+
+    try{
+
+      await sendToGoogleSheet(
+        data
+      );
+
+      showConfirmation(
+        data
+      );
+
+    }
+
+    catch(error){
+
+      console.error(
+        error
+      );
+
+      showError(
+        "The registration could not be sent. Please check the Google Sheets connection and try again."
+      );
+
+    }
+
+    finally{
+
+      submitButton.disabled =
+        false;
+
+      submitStatus
+        .classList
+        .remove(
+          "show"
+        );
+
+    }
+
+  }
 
 );
 
@@ -5422,245 +3979,33 @@ form.addEventListener(
 ========================================= */
 
 document
-    .getElementById(
-        "printBtn"
-    )
-    .addEventListener(
-
-        "click",
-
-        () => {
-
-            window.print();
-
-        }
-
-    );
-
-
-document
-    .getElementById(
-        "anotherBtn"
-    )
-    .addEventListener(
-
-        "click",
-
-        () => {
-
-            window.location.reload();
-
-        }
-
-    );
-
-
-/* =========================================
-   ONLINE / OFFLINE
-========================================= */
-
-function updateOnlineStatus(){
-
-    offlineBanner
-        .classList
-        .toggle(
-
-            "show",
-
-            !navigator.onLine
-
-        );
-
-}
-
-
-window.addEventListener(
-
-    "online",
-
-    updateOnlineStatus
-
-);
-
-
-window.addEventListener(
-
-    "offline",
-
-    updateOnlineStatus
-
-);
-
-
-updateOnlineStatus();
-
-
-/* =========================================
-   PWA INSTALL
-========================================= */
-
-let deferredPrompt =
-    null;
-
-
-const installBtn =
-    document.getElementById(
-        "installBtn"
-    );
-
-
-const installCard =
-    document.getElementById(
-        "installCard"
-    );
-
-
-const installHelp =
-    document.getElementById(
-        "installHelp"
-    );
-
-
-window.addEventListener(
-
-    "beforeinstallprompt",
-
-    event => {
-
-
-        event.preventDefault();
-
-
-        deferredPrompt =
-            event;
-
-    }
-
-);
-
-
-installBtn.addEventListener(
+  .getElementById(
+    "printBtn"
+  )
+  .addEventListener(
 
     "click",
 
-    async () => {
-
-
-        if(
-            deferredPrompt
-        ){
-
-            deferredPrompt.prompt();
-
-
-            await deferredPrompt
-                .userChoice;
-
-
-            deferredPrompt =
-                null;
-
-
-            return;
-
-        }
-
-
-        installHelp
-            .classList
-            .toggle(
-                "show"
-            );
-
+    () => {
+      window.print();
     }
 
-);
+  );
 
 
-window.addEventListener(
+document
+  .getElementById(
+    "anotherBtn"
+  )
+  .addEventListener(
 
-    "appinstalled",
+    "click",
 
     () => {
-
-
-        installCard.style.display =
-            "none";
-
-
-        deferredPrompt =
-            null;
-
+      window.location.reload();
     }
 
-);
-
-
-if(
-
-    window
-        .matchMedia(
-            "(display-mode: standalone)"
-        )
-        .matches
-
-    ||
-
-    window.navigator.standalone
-    ===
-    true
-
-){
-
-    installCard.style.display =
-        "none";
-
-}
-
-
-/* =========================================
-   SERVICE WORKER
-========================================= */
-
-if(
-    "serviceWorker"
-    in
-    navigator
-){
-
-    window.addEventListener(
-
-        "load",
-
-        () => {
-
-
-            navigator
-                .serviceWorker
-                .register(
-                    "./service-worker.js"
-                )
-                .catch(
-
-                    error => {
-
-                        console.error(
-
-                            "Service worker registration failed:",
-
-                            error
-
-                        );
-
-                    }
-
-                );
-
-        }
-
-    );
-
-}
+  );
 
 
 /* =========================================
@@ -5674,7 +4019,5 @@ createParticipant();
 
 </script>
 
-
 </body>
-
 </html>
